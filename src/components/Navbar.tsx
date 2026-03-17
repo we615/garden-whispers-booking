@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/#home" },
   { label: "About Us", href: "/about", isRoute: true },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Contact", href: "#booking" },
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Contact", href: "/#booking" },
 ];
 
 const Navbar = () => {
