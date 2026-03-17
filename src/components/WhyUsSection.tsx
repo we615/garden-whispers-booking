@@ -25,13 +25,13 @@ const WhyUsSection = () => {
             return (
               <div
                 key={r.title}
-                className="bg-muted/40 rounded-xl px-8 py-10 text-center border border-border/30 shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.06),0_12px_40px_-8px_hsl(var(--foreground)/0.08)] hover:shadow-[0_4px_12px_-2px_hsl(var(--foreground)/0.08),0_20px_50px_-10px_hsl(var(--foreground)/0.12)] hover:-translate-y-0.5 transition-all duration-300"
+                className="bg-muted/40 rounded-xl px-8 py-10 text-center border border-border shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.06),0_12px_40px_-8px_hsl(var(--foreground)/0.08)] hover:shadow-[0_4px_12px_-2px_hsl(var(--foreground)/0.08),0_20px_50px_-10px_hsl(var(--foreground)/0.12)] hover:-translate-y-0.5 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-full bg-secondary/80 flex items-center justify-center mx-auto mb-6">
                   <Icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-[13px] font-bold text-foreground mb-3 uppercase tracking-[0.12em] leading-snug">{r.title}</h3>
-                <p className="text-[13px] text-muted-foreground leading-relaxed">{r.desc}</p>
+                <h3 className="font-display text-sm font-bold text-foreground mb-3 uppercase tracking-[0.1em] leading-snug">{r.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium">{r.desc}</p>
               </div>
             );
           })}
