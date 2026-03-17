@@ -61,7 +61,7 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        <p className="text-center text-muted-foreground italic text-sm mb-12 max-w-xl mx-auto">
+        <p className="text-center text-muted-foreground italic text-base mb-12 max-w-xl mx-auto font-medium">
           With EcoBloom, your balcony becomes more than a garden — it becomes your own little sanctuary, where nature grows closer, one sapling at a time.
         </p>
 
