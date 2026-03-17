@@ -19,7 +19,7 @@ const HeroSection = () => {
   const next = () => setCurrent((c) => (c + 1) % slides.length);
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-end overflow-hidden pt-16">
+    <section id="home" className="relative h-screen flex items-end overflow-hidden">
       {/* Slideshow */}
       {slides.map((src, i) => (
         <img
