@@ -29,7 +29,7 @@ const WhyUsSection = () => {
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="group relative rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)] hover:shadow-[0_8px_30px_-4px_hsl(var(--foreground)/0.2)] hover:-translate-y-1 transition-all duration-500"
+              className="group rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)] hover:shadow-[0_8px_30px_-4px_hsl(var(--foreground)/0.2)] hover:-translate-y-1 transition-all duration-500 bg-card border border-border"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -38,10 +38,9 @@ const WhyUsSection = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h3 className="font-display text-base font-bold text-white uppercase tracking-wide mb-1.5">{r.title}</h3>
-                <p className="text-sm text-white/85 leading-relaxed font-medium">{r.desc}</p>
+              <div className="p-5">
+                <h3 className="font-display text-base font-bold text-foreground uppercase tracking-wide mb-1.5">{r.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium">{r.desc}</p>
               </div>
             </div>
           ))}
