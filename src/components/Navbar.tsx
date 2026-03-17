@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
@@ -12,16 +12,51 @@ const navLinks = [
   { label: "Contact", href: "/#booking" },
 ];
 
-const NavItem = ({ link, onClick }: { link: typeof navLinks[0]; onClick?: () => void }) => {
-  const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors";
-  if (link.isRoute) {
-    return <Link to={link.href} onClick={onClick} className={className}>{link.label}</Link>;
-  }
-  return <a href={link.href} onClick={onClick} className={className}>{link.label}</a>;
-};
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleHashClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      const hash = href.split("#")[1];
+      if (!hash) return;
+
+      if (location.pathname === "/") {
+        // Already on home page — just scroll
+        e.preventDefault();
+        document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // On a different page — navigate to home with hash
+        e.preventDefault();
+        navigate("/?scrollTo=" + hash);
+      }
+    },
+    [location.pathname, navigate]
+  );
+
+  const renderLink = (link: typeof navLinks[0], onClick?: () => void) => {
+    const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors";
+    if (link.isRoute) {
+      return (
+        <Link to={link.href} onClick={onClick} className={className}>
+          {link.label}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={link.href}
+        onClick={(e) => {
+          handleHashClick(e, link.href);
+          onClick?.();
+        }}
+        className={className}
+      >
+        {link.label}
+      </a>
+    );
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
@@ -33,10 +68,10 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <NavItem key={link.href} link={link} />
+            <span key={link.href}>{renderLink(link)}</span>
           ))}
           <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-            <a href="/#booking">Book Now</a>
+            <a href="/#booking" onClick={(e) => handleHashClick(e, "/#booking")}>Book Now</a>
           </Button>
         </div>
 
@@ -51,11 +86,11 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-b px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
             <div key={link.href} className="block py-2">
-              <NavItem link={link} onClick={() => setOpen(false)} />
+              {renderLink(link, () => setOpen(false))}
             </div>
           ))}
           <Button asChild className="rounded-full bg-accent text-accent-foreground w-full font-semibold">
-            <a href="/#booking" onClick={() => setOpen(false)}>Book Now</a>
+            <a href="/#booking" onClick={(e) => { handleHashClick(e, "/#booking"); setOpen(false); }}>Book Now</a>
           </Button>
         </div>
       )}

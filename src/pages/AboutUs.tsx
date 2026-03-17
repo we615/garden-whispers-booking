@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MissionSection from "@/components/MissionSection";
@@ -27,6 +28,13 @@ const values = [
 ];
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+
+  const goToBooking = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate("/?scrollTo=booking");
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -88,6 +96,7 @@ const AboutUs = () => {
           <p className="text-muted-foreground text-lg mb-8">Book a visit and let us transform your space into a living, breathing garden.</p>
           <a
             href="/#booking"
+            onClick={goToBooking}
             className="inline-flex items-center justify-center rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base h-12 px-8 shadow-lg transition-colors"
           >
             Book a Visit 🌱
