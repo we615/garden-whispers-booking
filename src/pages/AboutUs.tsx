@@ -28,6 +28,13 @@ const values = [
 ];
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+
+  const goToBooking = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate("/?scrollTo=booking");
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
