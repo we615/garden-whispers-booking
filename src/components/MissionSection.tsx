@@ -18,7 +18,7 @@ const MissionSection = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground uppercase tracking-[0.15em] mb-4">
             What 'EcoBloom' Means
           </h2>
-          <p className="text-muted-foreground text-sm max-w-2xl mx-auto mb-2 leading-relaxed font-medium">
+          <p className="text-muted-foreground text-base max-w-2xl mx-auto mb-2 leading-relaxed font-medium">
             EcoBloom is inspired by the quiet energy that keeps plants growing — the steady flow of nourishment, care, and intention.
           </p>
           <p className="font-display text-sm font-semibold text-foreground uppercase tracking-widest mb-12">

@@ -51,7 +51,7 @@ const BookingForm = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-2">
             Let's grow together 🌱
           </h2>
-          <p className="text-muted-foreground text-sm">Fill the form and we'll reach out via WhatsApp!</p>
+          <p className="text-muted-foreground text-base font-medium">Fill the form and we'll reach out via WhatsApp!</p>
         </div>
 
         {/* Steps indicator */}
@@ -159,7 +159,7 @@ const BookingForm = () => {
           </div>
         </div>
 
-        <p className="text-center text-xs text-muted-foreground mt-4">
+        <p className="text-center text-sm text-muted-foreground mt-4 font-medium">
           Or call us directly: <a href="tel:+919270993102" className="text-primary font-semibold">9270993102</a> / <a href="tel:+919322084283" className="text-primary font-semibold">9322084283</a>
         </p>
       </div>

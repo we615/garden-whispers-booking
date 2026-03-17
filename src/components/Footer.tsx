@@ -9,7 +9,7 @@ const Footer = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-tight mb-4">
             Let's Stay Connected
           </h2>
-          <p className="text-primary-foreground/70 text-sm mb-6">Reach us anytime through our social channels.</p>
+          <p className="text-primary-foreground/70 text-base mb-6 font-medium">Reach us anytime through our social channels.</p>
           <div className="flex justify-center gap-4">
             <a href="tel:+919270993102" className="w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
               <Phone className="w-4 h-4" />
@@ -27,7 +27,7 @@ const Footer = () => {
       {/* Footer */}
       <footer className="bg-foreground text-background py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-base">
             <div>
               <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">EcoBloom</h4>
               <ul className="space-y-2 text-background/70">
