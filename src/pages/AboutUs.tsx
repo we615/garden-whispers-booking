@@ -96,6 +96,7 @@ const AboutUs = () => {
           <p className="text-muted-foreground text-lg mb-8">Book a visit and let us transform your space into a living, breathing garden.</p>
           <a
             href="/#booking"
+            onClick={goToBooking}
             className="inline-flex items-center justify-center rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base h-12 px-8 shadow-lg transition-colors"
           >
             Book a Visit 🌱
