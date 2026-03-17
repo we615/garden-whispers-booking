@@ -78,6 +78,9 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Mission & Vision */}
+      <MissionSection />
+
       {/* CTA */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
