@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">"{t.text}"</p>
+              <p className="text-sm text-muted-foreground leading-relaxed font-medium">"{t.text}"</p>
             </div>
           ))}
         </div>
