@@ -61,14 +61,25 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-background border-b px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
-            >
-              {link.label}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
+              >
+                {link.label}
+              </a>
+            )
           ))}
           <Button asChild className="rounded-full bg-accent text-accent-foreground w-full font-semibold">
             <a href="#booking" onClick={() => setOpen(false)}>Book Now</a>
