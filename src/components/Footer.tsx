@@ -20,6 +20,9 @@ const Footer = () => {
             <a href="https://wa.me/919270993102" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
               <MessageCircle className="w-4 h-4" />
             </a>
+            <a href="https://www.instagram.com/ecobloom_plantcare?igsh=YnN5MWRjZXp6cTE1&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <Instagram className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
