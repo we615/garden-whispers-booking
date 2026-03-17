@@ -55,7 +55,7 @@ const ServicesSection = () => {
           </div>
           <div>
             <h3 className="font-display text-lg font-semibold text-foreground mb-2 uppercase tracking-wide">Flexible Care Plans</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-base text-muted-foreground leading-relaxed font-medium">
               Whether you need steady monthly maintenance or a complete garden makeover, we help your plants stay healthy and your space stay beautiful all year. Our approach is simple: thoughtful design, consistent care, and clear guidance.
             </p>
           </div>
