@@ -78,7 +78,7 @@ const ServicesSection = () => {
               </div>
               <div className="p-5">
                 <h3 className="font-display text-base font-semibold text-foreground mb-1">{s.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 font-medium">{s.desc}</p>
                 <Button asChild variant="outline" size="sm" className="rounded-sm text-xs font-semibold uppercase tracking-wide">
                   <a href={s.href}>{s.cta}</a>
                 </Button>

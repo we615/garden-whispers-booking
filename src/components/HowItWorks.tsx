@@ -4,7 +4,7 @@ const HowItWorks = () => {
   return (
     <section className="py-20 px-4 bg-primary text-primary-foreground">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-sm tracking-widest uppercase text-primary-foreground/60 mb-2">
+        <p className="text-base tracking-widest uppercase text-primary-foreground/60 mb-2 font-medium">
           Let our experts help you choose the right plan for your garden.
         </p>
         <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-tight mb-8">

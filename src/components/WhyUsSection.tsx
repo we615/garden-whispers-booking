@@ -31,7 +31,7 @@ const WhyUsSection = () => {
                   <Icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-sm font-bold text-foreground mb-3 uppercase tracking-[0.1em] leading-snug">{r.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-medium">{r.desc}</p>
+                <p className="text-base text-muted-foreground leading-relaxed font-medium">{r.desc}</p>
               </div>
             );
           })}

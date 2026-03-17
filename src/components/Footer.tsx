@@ -27,7 +27,7 @@ const Footer = () => {
       {/* Footer */}
       <footer className="bg-foreground text-background py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-base">
             <div>
               <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">EcoBloom</h4>
               <ul className="space-y-2 text-background/70">

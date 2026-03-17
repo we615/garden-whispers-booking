@@ -159,7 +159,7 @@ const BookingForm = () => {
           </div>
         </div>
 
-        <p className="text-center text-xs text-muted-foreground mt-4">
+        <p className="text-center text-sm text-muted-foreground mt-4 font-medium">
           Or call us directly: <a href="tel:+919270993102" className="text-primary font-semibold">9270993102</a> / <a href="tel:+919322084283" className="text-primary font-semibold">9322084283</a>
         </p>
       </div>
