@@ -1,21 +1,46 @@
-import { Award, UserCheck, Users, FlaskConical, Handshake, Home } from "lucide-react";
+import { UserCheck, ClipboardList, HeartPulse, Leaf, CalendarCheck, Puzzle } from "lucide-react";
 
 const reasons = [
-  { icon: Award, title: "Mentored By Senior Experts", desc: "We are guided by industry-leading horticulture experts, ensuring every garden benefits from deep expertise." },
-  { icon: UserCheck, title: "Trained & In-House Gardeners", desc: "Every gardener is a trained, full-time EcoBloom professional — ensuring quality, consistency, and care you can rely on." },
-  { icon: Users, title: "Guided By Expert Horticulturists", desc: "Our in-house horticulture specialists conduct plant health checks to keep your garden truly fit." },
-  { icon: FlaskConical, title: "Science-Backed Materials & Methods", desc: "From soil blends to nutrients, we use only tested, high-quality, science-backed formulations to strengthen your plants." },
-  { icon: Handshake, title: "Handpicked Partners For Plants & Pots", desc: "We curate reliable planters and pot partners so you can easily access healthy plants and long-lasting materials." },
-  { icon: Home, title: "Design + Maintenance Under One Roof", desc: "From designing your garden to caring for it month after month — everything is handled seamlessly by the team." },
+  {
+    icon: UserCheck,
+    title: "Expert Professional Plant Care",
+    desc: "We understand plant nutrition, watering cycles, soil health, and pest prevention scientifically. All our plant caretakers are trained professionals.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Personalized Care Plans",
+    desc: "Every balcony, home, or office has a different environment. We design care based on sunlight, humidity, and plant type.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Healthy & Aesthetic Growth",
+    desc: "We focus on both beauty and long-term plant health — not just maintenance, but real, lasting growth.",
+  },
+  {
+    icon: Leaf,
+    title: "100% Organic Solutions",
+    desc: "No harmful chemicals. We use organic nutrition, safe pest control, and premium pruning tools.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Regular Weekly Visits & Monitoring",
+    desc: "We do weekly visits to your plants to track growth, spot early issues, and give progress updates.",
+  },
+  {
+    icon: Puzzle,
+    title: "Customized Add-On Services",
+    desc: "Kitchen garden setup, vertical gardens, hydroponics, terrariums, kokedama, and all other green décor needs.",
+  },
 ];
 
 const WhyUsSection = () => {
   return (
     <section id="why-us" className="py-24 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Why Choose Us</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground uppercase tracking-[0.15em]">
-            Why EcoBloom
+            What Makes Us Different
           </h2>
         </div>
 
