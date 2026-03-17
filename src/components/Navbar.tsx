@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <a href="#home" className="font-display text-xl font-bold text-primary flex items-center gap-2">
+        <a href="/#home" className="font-display text-xl font-bold text-primary flex items-center gap-2">
           🌿 EcoBloom
         </a>
 
