@@ -43,11 +43,8 @@ const Navbar = () => {
               </a>
             )
           ))}
-          <Button
-            className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
-            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Book Now
+          <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+            <a href="/#booking">Book Now</a>
           </Button>
         </div>
 
