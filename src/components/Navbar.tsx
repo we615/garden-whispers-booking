@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "#home" },
+  { label: "About Us", href: "/about", isRoute: true },
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Why Us", href: "#why-us" },
@@ -23,16 +25,29 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            )
           ))}
-          <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-            <a href="#booking">Book Now</a>
+          <Button
+            className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Book Now
           </Button>
         </div>
 
@@ -46,17 +61,31 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-background border-b px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
-            >
-              {link.label}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
+              >
+                {link.label}
+              </a>
+            )
           ))}
-          <Button asChild className="rounded-full bg-accent text-accent-foreground w-full font-semibold">
-            <a href="#booking" onClick={() => setOpen(false)}>Book Now</a>
+          <Button
+            className="rounded-full bg-accent text-accent-foreground w-full font-semibold"
+            onClick={() => { setOpen(false); document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" }); }}
+          >
+            Book Now
           </Button>
         </div>
       )}
