@@ -25,13 +25,23 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            )
           ))}
           <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
             <a href="#booking">Book Now</a>
