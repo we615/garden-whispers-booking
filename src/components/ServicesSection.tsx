@@ -1,108 +1,69 @@
-import { Droplets, Shovel, ArrowRightLeft, Scissors, Leaf, Bug, TreePine, Palette, Salad, Waves, Fence, Sprout, Lamp } from "lucide-react";
+import svcSoil from "@/assets/svc-soil.jpg";
+import svcRepotting from "@/assets/svc-repotting.jpg";
+import svcPruning from "@/assets/svc-pruning.jpg";
+import svcNutrients from "@/assets/svc-nutrients.jpg";
+import svcSetup from "@/assets/svc-setup.jpg";
+import svcKitchen from "@/assets/svc-kitchen.jpg";
+import svcHydroponics from "@/assets/svc-hydroponics.jpg";
+import svcVertical from "@/assets/svc-vertical.jpg";
+import svcTerrarium from "@/assets/svc-terrarium.jpg";
+import servicePest from "@/assets/service-pest.jpg";
 
 const coreServices = [
-  {
-    icon: Droplets,
-    title: "Soil, Water & Sunlight Checkup",
-    desc: "Complete plant health assessment to ensure ideal growing conditions for every plant in your space.",
-  },
-  {
-    icon: Shovel,
-    title: "Soil Operations",
-    desc: "Soil loosening, aeration, and rejuvenation to improve soil strength and root growth.",
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Repotting & Transplanting",
-    desc: "Safe shifting of plants into new pots with proper root protection and care.",
-  },
-  {
-    icon: Scissors,
-    title: "Professional Cutting & Shaping",
-    desc: "Expert trimming and styling to keep your plants clean, lush, and aesthetically beautiful.",
-  },
-  {
-    icon: Leaf,
-    title: "Organic Nutrient Management",
-    desc: "Natural organic nutrition for stronger, greener plants — step-by-step according to each growth stage.",
-  },
-  {
-    icon: Bug,
-    title: "Organic Pest & Disease Management",
-    desc: "Eco-friendly treatment to protect your plants from insects, diseases, and fungus.",
-  },
-  {
-    icon: TreePine,
-    title: "Plants Setup & Arrangement",
-    desc: "We place and arrange your plants according to their sunlight needs, benefits, and space requirements.",
-  },
-  {
-    icon: Palette,
-    title: "Customized Green Setup & Décor",
-    desc: "Enhancing your space with beautiful greenery to make your home feel alive, fresh, and relaxing.",
-  },
+  { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions." },
+  { img: svcRepotting, title: "Repotting & Transplanting", desc: "Safe shifting of plants into new pots with proper root protection." },
+  { img: svcPruning, title: "Professional Cutting & Shaping", desc: "Expert trimming and styling to keep your plants lush and beautiful." },
+  { img: svcNutrients, title: "Organic Nutrient Management", desc: "Natural organic nutrition for stronger, greener plants at every growth stage." },
+  { img: servicePest, title: "Organic Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus." },
+  { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery." },
 ];
 
 const addOnServices = [
-  {
-    icon: Salad,
-    title: "Home Kitchen Vegetable Garden",
-    desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your own balcony.",
-  },
-  {
-    icon: Waves,
-    title: "Hydroponics Setup & Maintenance",
-    desc: "Soil-free growing systems installed and maintained for modern urban homes.",
-  },
-  {
-    icon: Fence,
-    title: "Vertical Garden — Installation & Care",
-    desc: "Transform walls into living green spaces with professional vertical garden setups.",
-  },
-  {
-    icon: Sprout,
-    title: "Vermicompost & Kids' Gardening Kits",
-    desc: "Sustainable composting solutions and fun gardening kits designed for kids.",
-  },
-  {
-    icon: Lamp,
-    title: "Terrariums & HomeGreen Décor",
-    desc: "Beautiful terrariums and other green décor items to bring nature indoors.",
-  },
+  { img: svcKitchen, title: "Home Kitchen Vegetable Garden", desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your balcony." },
+  { img: svcHydroponics, title: "Hydroponics Setup & Maintenance", desc: "Soil-free growing systems installed and maintained for modern urban homes." },
+  { img: svcVertical, title: "Vertical Garden — Installation & Care", desc: "Transform walls into living green spaces with professional vertical setups." },
+  { img: svcTerrarium, title: "Terrariums & HomeGreen Décor", desc: "Beautiful terrariums, vermicompost kits, and other green décor items." },
 ];
-
-const ServiceCard = ({ icon: Icon, title, desc }: { icon: React.ElementType; title: string; desc: string }) => (
-  <div className="bg-muted/40 rounded-xl px-7 py-8 border border-border shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.06),0_12px_40px_-8px_hsl(var(--foreground)/0.08)] hover:shadow-[0_4px_12px_-2px_hsl(var(--foreground)/0.08),0_20px_50px_-10px_hsl(var(--foreground)/0.12)] hover:-translate-y-0.5 transition-all duration-300">
-    <div className="w-12 h-12 rounded-full bg-secondary/80 flex items-center justify-center mb-5">
-      <Icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
-    </div>
-    <h3 className="font-display text-sm font-bold text-foreground mb-2 uppercase tracking-[0.08em] leading-snug">{title}</h3>
-    <p className="text-base text-muted-foreground leading-relaxed font-medium">{desc}</p>
-  </div>
-);
 
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Core Services */}
+        {/* Header */}
         <div className="text-center mb-6">
           <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">What We Do</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
             Premium Indoor & Outdoor Plant Care
           </h2>
         </div>
-        <p className="text-center text-muted-foreground text-base mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
-          From soil health to styling, we handle every aspect of your garden with expert, science-backed care — so your plants stay healthy and your space stays beautiful.
+        <p className="text-center text-muted-foreground text-base mb-16 max-w-2xl mx-auto font-medium leading-relaxed">
+          From soil health to styling — we handle every aspect of your garden with expert, science-backed care.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-24">
-          {coreServices.map((s) => (
-            <ServiceCard key={s.title} {...s} />
+        {/* Core Services — Alternating image+text rows */}
+        <div className="space-y-8 mb-28">
+          {coreServices.map((s, i) => (
+            <div
+              key={s.title}
+              className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-6 items-center group`}
+            >
+              <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)]">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="w-full md:w-1/2 md:px-8">
+                <div className="w-12 h-1 bg-accent rounded-full mb-4" />
+                <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">{s.title}</h3>
+                <p className="text-base text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* Add-On Services */}
+        {/* Add-On Services — Image card grid with overlay */}
         <div className="text-center mb-6">
           <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Explore More</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
@@ -110,12 +71,28 @@ const ServicesSection = () => {
           </h2>
         </div>
         <p className="text-center text-muted-foreground text-base mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
-          Go beyond regular maintenance with our specialized services — kitchen gardens, hydroponics, terrariums, and more.
+          Go beyond regular maintenance — kitchen gardens, hydroponics, terrariums, and more.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {addOnServices.map((s) => (
-            <ServiceCard key={s.title} {...s} />
+            <div
+              key={s.title}
+              className="group relative rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)] hover:shadow-[0_8px_30px_-4px_hsl(var(--foreground)/0.2)] transition-all duration-500"
+            >
+              <div className="aspect-[3/4] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="font-display text-base font-bold text-white uppercase tracking-wide mb-2">{s.title}</h3>
+                <p className="text-sm text-white/80 leading-relaxed font-medium">{s.desc}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
