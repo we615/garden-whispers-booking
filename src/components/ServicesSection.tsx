@@ -49,7 +49,7 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto mb-16">
           <div>
             <h3 className="font-display text-lg font-semibold text-foreground mb-2 uppercase tracking-wide">Designed for Urban Homes</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-base text-muted-foreground leading-relaxed font-medium">
               EcoBloom is a plant care service designed for today's urban homes. We blend expert horticulture with warm, personalized care to create green spaces that feel calming, intentional, and uniquely yours.
             </p>
           </div>
