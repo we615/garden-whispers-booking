@@ -1,29 +1,30 @@
 const reasons = [
-  { icon: "👨‍🌾", title: "Expert Horticulturists", desc: "Trained professionals who understand every plant's unique needs." },
-  { icon: "📝", title: "Personalized Care Plans", desc: "Custom schedules tailored to your garden's species and environment." },
-  { icon: "🌿", title: "100% Organic Solutions", desc: "We use only eco-friendly, organic products for pest control and nutrition." },
-  { icon: "📊", title: "Weekly Monitoring", desc: "Regular health checks and progress reports for your garden." },
-  { icon: "🌺", title: "Healthy & Aesthetic Growth", desc: "We care about both plant health and visual beauty." },
-  { icon: "✨", title: "Customized Add-Ons", desc: "Garden décor, seasonal planting, terrace makeovers and more." },
+  { icon: "🔬", title: "Mentored By Senior Experts", desc: "We are guided by industry-leading horticulture experts, ensuring every garden benefits from deep expertise." },
+  { icon: "👨‍🌾", title: "Trained & In-House Gardeners", desc: "Every gardener is a trained, full-time EcoBloom professional — ensuring quality, consistency, and care you can rely on." },
+  { icon: "🌿", title: "Guided By Expert Horticulturists", desc: "Our in-house horticulture specialists conduct plant health checks to keep your garden truly fit." },
+  { icon: "📚", title: "Science-Backed Materials & Methods", desc: "From soil blends to nutrients, we use only tested, high-quality, science-backed formulations to strengthen your plants." },
+  { icon: "🪴", title: "Handpicked Partners For Plants & Pots", desc: "We curate reliable planters and pot partners so you can easily access healthy plants and long-lasting materials." },
+  { icon: "🏠", title: "Design + Maintenance Under One Roof", desc: "From designing your garden to caring for it month after month — everything is handled seamlessly by the team." },
 ];
 
 const WhyUsSection = () => {
   return (
-    <section id="why-us" className="py-24 px-4 bg-secondary/50">
+    <section id="why-us" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Why EcoBloom</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
-            What makes us different 🌟
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground uppercase tracking-tight">
+            Why EcoBloom
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((r) => (
-            <div key={r.title} className="bg-card rounded-lg p-6 border border-border/50 shadow-sm">
-              <div className="text-3xl mb-3">{r.icon}</div>
-              <h3 className="font-display text-lg font-semibold text-foreground mb-2">{r.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+            <div key={r.title} className="bg-card rounded-lg p-6 border border-border/50 shadow-sm text-center">
+              <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mx-auto mb-4 text-2xl">
+                {r.icon}
+              </div>
+              <h3 className="font-display text-sm font-semibold text-foreground mb-2 uppercase tracking-wide">{r.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{r.desc}</p>
             </div>
           ))}
         </div>

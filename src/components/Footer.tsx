@@ -1,53 +1,72 @@
+import { Phone, Mail, MessageCircle } from "lucide-react";
+
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Brand */}
-          <div>
-            <h3 className="font-display text-2xl font-bold mb-4">🌿 EcoBloom</h3>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Professional plant care & garden design services. We make spaces bloom with love, expertise, and organic practices.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><a href="#home" className="hover:text-primary-foreground transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-primary-foreground transition-colors">Services</a></li>
-              <li><a href="#pricing" className="hover:text-primary-foreground transition-colors">Pricing</a></li>
-              <li><a href="#booking" className="hover:text-primary-foreground transition-colors">Book a Visit</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Contact Us</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>📞 <a href="tel:+919270993102">9270993102</a> / <a href="tel:+919322084283">9322084283</a></li>
-              <li>📧 <a href="mailto:ecobloomplantcare@gmail.com">ecobloomplantcare@gmail.com</a></li>
-              <li>
-                💬{" "}
-                <a
-                  href="https://wa.me/919270993102"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-foreground transition-colors"
-                >
-                  Chat on WhatsApp
-                </a>
-              </li>
-            </ul>
+    <>
+      {/* CTA Banner */}
+      <section className="py-20 px-4 bg-primary text-primary-foreground">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-tight mb-4">
+            Let's Stay Connected
+          </h2>
+          <p className="text-primary-foreground/70 text-sm mb-6">Reach us anytime through our social channels.</p>
+          <div className="flex justify-center gap-4">
+            <a href="tel:+919270993102" className="w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <Phone className="w-4 h-4" />
+            </a>
+            <a href="mailto:ecobloomplantcare@gmail.com" className="w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <Mail className="w-4 h-4" />
+            </a>
+            <a href="https://wa.me/919270993102" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 flex items-center justify-center transition-colors">
+              <MessageCircle className="w-4 h-4" />
+            </a>
           </div>
         </div>
+      </section>
 
-        <div className="border-t border-primary-foreground/20 mt-12 pt-6 text-center text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} EcoBloom Plant Care. All rights reserved. 🌱
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+            <div>
+              <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">EcoBloom</h4>
+              <ul className="space-y-2 text-background/70">
+                <li><a href="#home" className="hover:text-background transition-colors">Home</a></li>
+                <li><a href="#why-us" className="hover:text-background transition-colors">About</a></li>
+                <li><a href="#booking" className="hover:text-background transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">Services</h4>
+              <ul className="space-y-2 text-background/70">
+                <li><a href="#services" className="hover:text-background transition-colors">Monthly Care</a></li>
+                <li><a href="#services" className="hover:text-background transition-colors">Annual Plans</a></li>
+                <li><a href="#services" className="hover:text-background transition-colors">Design Your Garden</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">Services</h4>
+              <ul className="space-y-2 text-background/70">
+                <li><a href="#pricing" className="hover:text-background transition-colors">Pricing</a></li>
+                <li><a href="#booking" className="hover:text-background transition-colors">Book a Visit</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">Contact</h4>
+              <ul className="space-y-2 text-background/70">
+                <li><a href="tel:+919270993102">9270993102</a></li>
+                <li><a href="tel:+919322084283">9322084283</a></li>
+                <li><a href="mailto:ecobloomplantcare@gmail.com" className="text-xs">ecobloomplantcare@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-background/10 mt-10 pt-6 text-center text-xs text-background/40">
+            EcoBloom © {new Date().getFullYear()}. All rights reserved.
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
