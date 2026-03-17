@@ -1,15 +1,24 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "/about", isRoute: true },
   { label: "Services", href: "/#services" },
   { label: "Pricing", href: "/#pricing" },
   { label: "Why Us", href: "/#why-us" },
   { label: "Contact", href: "/#booking" },
 ];
+
+const NavItem = ({ link, onClick }: { link: typeof navLinks[0]; onClick?: () => void }) => {
+  const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors";
+  if (link.isRoute) {
+    return <Link to={link.href} onClick={onClick} className={className}>{link.label}</Link>;
+  }
+  return <a href={link.href} onClick={onClick} className={className}>{link.label}</a>;
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -17,20 +26,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <a href="/" className="font-display text-xl font-bold text-primary flex items-center gap-2">
+        <Link to="/" className="font-display text-xl font-bold text-primary flex items-center gap-2">
           🌿 EcoBloom
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
+            <NavItem key={link.href} link={link} />
           ))}
           <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
             <a href="/#booking">Book Now</a>
@@ -47,14 +50,9 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-background border-b px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block text-sm font-medium text-foreground/70 hover:text-primary py-2"
-            >
-              {link.label}
-            </a>
+            <div key={link.href} className="block py-2">
+              <NavItem link={link} onClick={() => setOpen(false)} />
+            </div>
           ))}
           <Button asChild className="rounded-full bg-accent text-accent-foreground w-full font-semibold">
             <a href="/#booking" onClick={() => setOpen(false)}>Book Now</a>
