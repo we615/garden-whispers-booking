@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/#home" },
   { label: "About Us", href: "/about", isRoute: true },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Contact", href: "#booking" },
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Contact", href: "/#booking" },
 ];
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <a href="#home" className="font-display text-xl font-bold text-primary flex items-center gap-2">
+        <a href="/#home" className="font-display text-xl font-bold text-primary flex items-center gap-2">
           🌿 EcoBloom
         </a>
 
@@ -43,11 +43,8 @@ const Navbar = () => {
               </a>
             )
           ))}
-          <Button
-            className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
-            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Book Now
+          <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+            <a href="/#booking">Book Now</a>
           </Button>
         </div>
 
@@ -81,11 +78,8 @@ const Navbar = () => {
               </a>
             )
           ))}
-          <Button
-            className="rounded-full bg-accent text-accent-foreground w-full font-semibold"
-            onClick={() => { setOpen(false); document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" }); }}
-          >
-            Book Now
+          <Button asChild className="rounded-full bg-accent text-accent-foreground w-full font-semibold">
+            <a href="/#booking" onClick={() => setOpen(false)}>Book Now</a>
           </Button>
         </div>
       )}
