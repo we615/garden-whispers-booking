@@ -1,4 +1,4 @@
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
