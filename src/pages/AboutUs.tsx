@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionSection from "@/components/MissionSection";
 import { Leaf, Heart, Users, Target } from "lucide-react";
 
 const values = [
@@ -76,6 +77,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Mission & Vision */}
+      <MissionSection />
 
       {/* CTA */}
       <section className="py-20 px-4">
