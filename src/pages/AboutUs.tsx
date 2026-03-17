@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MissionSection from "@/components/MissionSection";
 import { Leaf, Heart, Users, Target } from "lucide-react";
 
 const values = [
