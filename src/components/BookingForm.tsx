@@ -51,7 +51,7 @@ const BookingForm = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-2">
             Let's grow together 🌱
           </h2>
-          <p className="text-muted-foreground text-sm">Fill the form and we'll reach out via WhatsApp!</p>
+          <p className="text-muted-foreground text-base font-medium">Fill the form and we'll reach out via WhatsApp!</p>
         </div>
 
         {/* Steps indicator */}
