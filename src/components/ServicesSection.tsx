@@ -1,89 +1,121 @@
-import { Button } from "@/components/ui/button";
-import serviceMonthly from "@/assets/service-monthly.jpg";
-import serviceDesign from "@/assets/service-design.jpg";
-import serviceRepotting from "@/assets/service-repotting.jpg";
-import servicePest from "@/assets/service-pest.jpg";
+import { Droplets, Shovel, ArrowRightLeft, Scissors, Leaf, Bug, TreePine, Palette, Salad, Waves, Fence, Sprout, Lamp } from "lucide-react";
 
-const services = [
+const coreServices = [
   {
-    img: serviceMonthly,
-    title: "Monthly Care",
-    desc: "One-time visits for pruning, cleaning and plant revival.",
-    cta: "View Plans",
-    href: "#pricing",
+    icon: Droplets,
+    title: "Soil, Water & Sunlight Checkup",
+    desc: "Complete plant health assessment to ensure ideal growing conditions for every plant in your space.",
   },
   {
-    img: serviceRepotting,
-    title: "Annual Care",
-    desc: "Monthly maintenance to keep your garden healthy.",
-    cta: "View Plans",
-    href: "#pricing",
+    icon: Shovel,
+    title: "Soil Operations",
+    desc: "Soil loosening, aeration, and rejuvenation to improve soil strength and root growth.",
   },
   {
-    img: serviceDesign,
-    title: "Design Your Garden",
-    desc: "One-time visits for pruning, cleaning and plant revival.",
-    cta: "Connect Now",
-    href: "#booking",
+    icon: ArrowRightLeft,
+    title: "Repotting & Transplanting",
+    desc: "Safe shifting of plants into new pots with proper root protection and care.",
   },
   {
-    img: servicePest,
-    title: "Pest Control",
-    desc: "100% organic pest management to keep plants safe.",
-    cta: "Book Now",
-    href: "#booking",
+    icon: Scissors,
+    title: "Professional Cutting & Shaping",
+    desc: "Expert trimming and styling to keep your plants clean, lush, and aesthetically beautiful.",
+  },
+  {
+    icon: Leaf,
+    title: "Organic Nutrient Management",
+    desc: "Natural organic nutrition for stronger, greener plants — step-by-step according to each growth stage.",
+  },
+  {
+    icon: Bug,
+    title: "Organic Pest & Disease Management",
+    desc: "Eco-friendly treatment to protect your plants from insects, diseases, and fungus.",
+  },
+  {
+    icon: TreePine,
+    title: "Plants Setup & Arrangement",
+    desc: "We place and arrange your plants according to their sunlight needs, benefits, and space requirements.",
+  },
+  {
+    icon: Palette,
+    title: "Customized Green Setup & Décor",
+    desc: "Enhancing your space with beautiful greenery to make your home feel alive, fresh, and relaxing.",
   },
 ];
+
+const addOnServices = [
+  {
+    icon: Salad,
+    title: "Home Kitchen Vegetable Garden",
+    desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your own balcony.",
+  },
+  {
+    icon: Waves,
+    title: "Hydroponics Setup & Maintenance",
+    desc: "Soil-free growing systems installed and maintained for modern urban homes.",
+  },
+  {
+    icon: Fence,
+    title: "Vertical Garden — Installation & Care",
+    desc: "Transform walls into living green spaces with professional vertical garden setups.",
+  },
+  {
+    icon: Sprout,
+    title: "Vermicompost & Kids' Gardening Kits",
+    desc: "Sustainable composting solutions and fun gardening kits designed for kids.",
+  },
+  {
+    icon: Lamp,
+    title: "Terrariums & HomeGreen Décor",
+    desc: "Beautiful terrariums and other green décor items to bring nature indoors.",
+  },
+];
+
+const ServiceCard = ({ icon: Icon, title, desc }: { icon: React.ElementType; title: string; desc: string }) => (
+  <div className="bg-muted/40 rounded-xl px-7 py-8 border border-border shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.06),0_12px_40px_-8px_hsl(var(--foreground)/0.08)] hover:shadow-[0_4px_12px_-2px_hsl(var(--foreground)/0.08),0_20px_50px_-10px_hsl(var(--foreground)/0.12)] hover:-translate-y-0.5 transition-all duration-300">
+    <div className="w-12 h-12 rounded-full bg-secondary/80 flex items-center justify-center mb-5">
+      <Icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+    </div>
+    <h3 className="font-display text-sm font-bold text-foreground mb-2 uppercase tracking-[0.08em] leading-snug">{title}</h3>
+    <p className="text-base text-muted-foreground leading-relaxed font-medium">{desc}</p>
+  </div>
+);
 
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Intro */}
+        {/* Core Services */}
         <div className="text-center mb-6">
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">What We Do</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
-            Your Garden. Our Care.
+            Premium Indoor & Outdoor Plant Care
           </h2>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto mb-16">
-          <div>
-            <h3 className="font-display text-lg font-semibold text-foreground mb-2 uppercase tracking-wide">Designed for Urban Homes</h3>
-            <p className="text-base text-muted-foreground leading-relaxed font-medium">
-              EcoBloom is a plant care service designed for today's urban homes. We blend expert horticulture with warm, personalized care to create green spaces that feel calming, intentional, and uniquely yours.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-display text-lg font-semibold text-foreground mb-2 uppercase tracking-wide">Flexible Care Plans</h3>
-            <p className="text-base text-muted-foreground leading-relaxed font-medium">
-              Whether you need steady monthly maintenance or a complete garden makeover, we help your plants stay healthy and your space stay beautiful all year. Our approach is simple: thoughtful design, consistent care, and clear guidance.
-            </p>
-          </div>
-        </div>
-
-        <p className="text-center text-muted-foreground italic text-base mb-12 max-w-xl mx-auto font-medium">
-          With EcoBloom, your balcony becomes more than a garden — it becomes your own little sanctuary, where nature grows closer, one sapling at a time.
+        <p className="text-center text-muted-foreground text-base mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
+          From soil health to styling, we handle every aspect of your garden with expert, science-backed care — so your plants stay healthy and your space stays beautiful.
         </p>
 
-        {/* Service Cards — Sapplo style */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((s) => (
-            <div key={s.title} className="group bg-card rounded-lg overflow-hidden border border-border/50 shadow-sm hover:shadow-lg transition-all">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="font-display text-base font-semibold text-foreground mb-1">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 font-medium">{s.desc}</p>
-                <Button asChild variant="outline" size="sm" className="rounded-sm text-xs font-semibold uppercase tracking-wide">
-                  <a href={s.href}>{s.cta}</a>
-                </Button>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-24">
+          {coreServices.map((s) => (
+            <ServiceCard key={s.title} {...s} />
+          ))}
+        </div>
+
+        {/* Add-On Services */}
+        <div className="text-center mb-6">
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Explore More</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
+            Green Add-On Services
+          </h2>
+        </div>
+        <p className="text-center text-muted-foreground text-base mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
+          Go beyond regular maintenance with our specialized services — kitchen gardens, hydroponics, terrariums, and more.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          {addOnServices.map((s) => (
+            <ServiceCard key={s.title} {...s} />
           ))}
         </div>
       </div>
