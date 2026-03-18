@@ -62,8 +62,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="EcoBloom Plant Care" className="h-9 sm:h-10 w-auto" />
+        <Link to="/" className="flex items-center gap-2 mr-auto">
+          <img src={logo} alt="EcoBloom Plant Care" className="h-12 sm:h-14 w-auto" />
         </Link>
 
         {/* Desktop */}
