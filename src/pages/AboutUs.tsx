@@ -81,7 +81,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {values.map((v) => (
               <div key={v.title} className="bg-card rounded-2xl border border-border p-8 hover:-translate-y-1 transition-transform duration-300">
-                <v.icon className="w-10 h-10 text-primary mb-4" />
+                <v.icon className={`w-10 h-10 ${v.iconClass} mb-4`} />
                 <h3 className="font-display text-xl font-bold text-foreground mb-2">{v.title}</h3>
                 <p className="text-muted-foreground">{v.description}</p>
               </div>
