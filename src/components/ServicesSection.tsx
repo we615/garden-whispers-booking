@@ -55,7 +55,7 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 md:px-8">
-                <div className="w-12 h-1 bg-accent rounded-full mb-4" />
+                <div className={`w-12 h-1 rounded-full mb-4 ${i % 3 === 0 ? 'bg-brand-red' : i % 3 === 1 ? 'bg-brand-blue' : 'bg-accent'}`} />
                 <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">{s.title}</h3>
                 <p className="text-base text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
               </div>
