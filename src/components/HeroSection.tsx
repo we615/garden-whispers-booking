@@ -52,7 +52,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-20 flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 flex flex-col items-center text-center">
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
           We Make Your Space<br />Bloom 🌿
         </h1>
