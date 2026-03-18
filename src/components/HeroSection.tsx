@@ -54,10 +54,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full px-6 flex flex-col items-center text-center">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-3">
-          We Make Your Space<br />Bloom 🌿
-        </h1>
-        <p className="text-base sm:text-lg italic text-white/90 mb-4 font-medium tracking-wide">"We make spaces bloom"</p>
+        <img src={logoFull} alt="EcoBloom Plant Care - We make spaces bloom" className="w-48 sm:w-56 md:w-64 lg:w-72 mb-6 drop-shadow-2xl" />
         <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl">
           Professional plant care & garden maintenance services in Pune. Founded by agriculture graduates, powered by passion.
         </p>
