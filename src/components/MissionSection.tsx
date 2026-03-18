@@ -26,7 +26,7 @@ const MissionSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
           {/* Left — big quote & intro */}
           <div className="lg:sticky lg:top-32">
-            <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-3">What Drives Us</p>
+            <p className="text-sm font-semibold tracking-widest uppercase text-brand-blue mb-3">What Drives Us</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground uppercase tracking-[0.1em] mb-6">
               Our Mission<br />& Vision
             </h2>
