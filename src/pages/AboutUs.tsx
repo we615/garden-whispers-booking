@@ -44,7 +44,7 @@ const AboutUs = () => {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-base font-semibold tracking-widest uppercase text-accent mb-3">About Us</p>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">
-            We're EcoBloom 🌿
+            We're EcoBloom Plant Care
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Founded in Pune, EcoBloom is a passionate team of plant lovers and trained gardeners dedicated to bringing life, color, and fresh air into your home — the organic way.
