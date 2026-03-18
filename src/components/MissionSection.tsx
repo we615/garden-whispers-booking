@@ -1,5 +1,12 @@
 import { Home, Flower2, Wrench, Leaf, Salad, FlaskConical, TreePine, Heart } from "lucide-react";
 
+const brandColors = [
+  "bg-primary/10 text-primary",
+  "bg-brand-red/10 text-brand-red",
+  "bg-brand-blue/10 text-brand-blue",
+  "bg-accent/15 text-accent",
+];
+
 const missions = [
   { icon: Home, title: "Greener & Healthier Spaces", desc: "Natural, eco-friendly homes and workplaces that feel fresh, calm, and full of life." },
   { icon: Flower2, title: "Relaxing & Aesthetic Balconies", desc: "Making every balcony beautiful and green, helping you feel refreshed and connected with nature." },
