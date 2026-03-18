@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroReal1 from "@/assets/hero-real-1.jpg";
 import heroReal2 from "@/assets/hero-real-2.jpg";
 import heroGarden from "@/assets/hero-garden.jpg";
-import logoFull from "@/assets/logo-full.png";
 
 const slides = [heroReal1, heroReal2, heroGarden];
 
@@ -54,7 +53,9 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full px-6 flex flex-col items-center text-center">
-        <img src={logoFull} alt="EcoBloom Plant Care - We make spaces bloom" className="w-48 sm:w-56 md:w-64 lg:w-72 mb-6 drop-shadow-2xl" />
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
+          We Make Your Space<br />Bloom 🌿
+        </h1>
         <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl">
           Professional plant care & garden maintenance services in Pune. Founded by agriculture graduates, powered by passion.
         </p>
