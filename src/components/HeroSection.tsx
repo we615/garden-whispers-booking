@@ -19,7 +19,7 @@ const HeroSection = () => {
   const next = () => setCurrent((c) => (c + 1) % slides.length);
 
   return (
-    <section id="home" className="relative h-screen flex items-end overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Slideshow */}
       {slides.map((src, i) => (
         <img
@@ -52,17 +52,19 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-20">
-        <div className="max-w-2xl">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
-            End-to-End<br />Plant Care
-          </h1>
-          <p className="text-lg text-white/80 mb-8 max-w-lg">
-            We design your garden, plant it thoughtfully, and maintain it month after month.
-          </p>
-          <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold shadow-lg">
-            <a href="#pricing">Explore Care Plans</a>
+      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-20 flex flex-col items-center text-center">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
+          We Make Your Space<br />Bloom 🌿
+        </h1>
+        <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl">
+          Professional plant care & garden maintenance services in Pune. Founded by agriculture graduates, powered by passion.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold shadow-lg px-8">
+            <a href="#booking">Book Free Visit</a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="rounded-full border-2 border-white text-white hover:bg-white/10 text-base font-semibold px-8 bg-transparent">
+            <a href="https://wa.me/919270993102" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
           </Button>
         </div>
       </div>
