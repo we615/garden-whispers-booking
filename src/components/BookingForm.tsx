@@ -54,7 +54,7 @@ const BookingForm = () => {
     <section id="booking" className="py-28 px-4 bg-secondary/30">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-base font-semibold tracking-widest uppercase text-accent mb-3">Book a Visit</p>
+          <p className="text-base font-semibold tracking-widest uppercase text-brand-red mb-3">Book a Visit</p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground mb-3">
             Let's grow together 🌱
           </h2>

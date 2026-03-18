@@ -34,7 +34,7 @@ const MissionSection = () => {
               EcoBloom isn't just a plant service — we make your spaces bloom with life, health, and beauty. 
               We take complete responsibility for your plants so you enjoy greenery without stress.
             </p>
-            <blockquote className="border-l-4 border-l-accent pl-5 py-2">
+            <blockquote className="border-l-4 border-l-brand-red pl-5 py-2">
               <p className="font-display text-lg font-semibold text-foreground italic leading-relaxed">
                 "We care today for a greener tomorrow"
               </p>

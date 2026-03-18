@@ -65,7 +65,7 @@ const ServicesSection = () => {
 
         {/* Add-On Services — Image card grid with overlay */}
         <div className="text-center mb-6">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Explore More</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-red mb-2">Explore More</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
             Green Add-On Services
           </h2>
