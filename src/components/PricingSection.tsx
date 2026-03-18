@@ -43,7 +43,7 @@ const PricingSection = () => {
     <section id="pricing" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Pricing</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-blue mb-2">Pricing</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Garden Care Calculator 🌼
           </h2>

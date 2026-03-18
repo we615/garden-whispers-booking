@@ -19,7 +19,7 @@ const WhyUsSection = () => {
     <section id="why-us" className="py-24 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Why Choose Us</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-red mb-2">Why Choose Us</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground uppercase tracking-[0.15em]">
             What Makes Us Different
           </h2>

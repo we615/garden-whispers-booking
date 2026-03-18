@@ -31,7 +31,7 @@ const ServicesSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">What We Do</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-blue mb-2">What We Do</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
             Premium Indoor & Outdoor Plant Care
           </h2>
@@ -55,7 +55,7 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 md:px-8">
-                <div className="w-12 h-1 bg-accent rounded-full mb-4" />
+                <div className={`w-12 h-1 rounded-full mb-4 ${i % 3 === 0 ? 'bg-brand-red' : i % 3 === 1 ? 'bg-brand-blue' : 'bg-accent'}`} />
                 <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">{s.title}</h3>
                 <p className="text-base text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
               </div>
@@ -65,7 +65,7 @@ const ServicesSection = () => {
 
         {/* Add-On Services — Image card grid with overlay */}
         <div className="text-center mb-6">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">Explore More</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-red mb-2">Explore More</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
             Green Add-On Services
           </h2>

@@ -11,14 +11,14 @@ const testimonials = [
     time: "1 month ago",
     rating: 5,
     text: "Really happy with my gardening experience. They have been very helpful and knowledgeable. The team took out a professional approach. I would highly recommend EcoBloom!",
-    color: "bg-accent",
+    color: "bg-brand-red",
   },
   {
     name: "Kaushik Kochhar",
     time: "2 months ago",
     rating: 5,
     text: "Smart team, very passionate for what they do. Had a great knowledge. Quick response and professional. Highly recommended!",
-    color: "bg-primary",
+    color: "bg-brand-blue",
   },
 ];
 
