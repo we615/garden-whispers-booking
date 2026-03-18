@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-base">
             <div>
-              <h4 className="font-display font-semibold text-xs uppercase tracking-widest mb-4 text-background/60">EcoBloom</h4>
+              <img src={logo} alt="EcoBloom Plant Care" className="h-12 w-auto mb-3 brightness-0 invert" />
               <ul className="space-y-2 text-background/70">
                 <li><a href="#home" className="hover:text-background transition-colors">Home</a></li>
                 <li><a href="#why-us" className="hover:text-background transition-colors">About</a></li>
