@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroReal1 from "@/assets/hero-real-1.jpg";
 import heroReal2 from "@/assets/hero-real-2.jpg";
 import heroGarden from "@/assets/hero-garden.jpg";
+import logoFull from "@/assets/logo-full.png";
 
 const slides = [heroReal1, heroReal2, heroGarden];
 
