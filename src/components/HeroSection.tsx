@@ -4,9 +4,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroReal1 from "@/assets/hero-real-1.jpg";
 import heroReal2 from "@/assets/hero-real-2.jpg";
 import heroGarden from "@/assets/hero-garden.jpg";
-import teamSpraying from "@/assets/team-spraying.png";
 
-const slides = [heroReal1, teamSpraying, heroGarden];
+const slides = [heroReal1, heroReal2, heroGarden];
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
