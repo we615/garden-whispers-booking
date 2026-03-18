@@ -1,5 +1,5 @@
 import { Phone, Mail, MessageCircle, Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-wordmark.png";
 
 const Footer = () => {
   return (
@@ -33,7 +33,9 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-base">
             <div>
-              <img src={logo} alt="EcoBloom Plant Care" className="h-12 w-auto mb-3" />
+              <div className="inline-block bg-background rounded-md p-1.5 mb-3">
+                <img src={logo} alt="EcoBloom Plant Care" className="h-10 w-auto" />
+              </div>
               <ul className="space-y-2 text-background/70">
                 <li><a href="#home" className="hover:text-background transition-colors">Home</a></li>
                 <li><a href="#why-us" className="hover:text-background transition-colors">About</a></li>
