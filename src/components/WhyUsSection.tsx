@@ -1,8 +1,8 @@
-import whyExpert from "@/assets/why-expert.jpg";
+import whyExpert from "@/assets/team-repotting.png";
 import whyPersonalized from "@/assets/why-personalized.jpg";
 import whyHealthy from "@/assets/why-healthy.jpg";
-import whyOrganic from "@/assets/why-organic.jpg";
-import whyWeekly from "@/assets/why-weekly.jpg";
+import whyOrganic from "@/assets/team-spraying.png";
+import whyWeekly from "@/assets/team-pruning.png";
 import whyAddon from "@/assets/why-addon.jpg";
 
 const reasons = [
