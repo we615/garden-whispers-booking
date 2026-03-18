@@ -31,11 +31,11 @@ const WhyUsSection = () => {
               key={r.title}
               className="group rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)] hover:shadow-[0_8px_30px_-4px_hsl(var(--foreground)/0.2)] hover:-translate-y-1 transition-all duration-500 bg-card border border-border"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[3/3] overflow-hidden">
                 <img
                   src={r.img}
                   alt={r.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-5">
