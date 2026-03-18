@@ -53,8 +53,8 @@ const MissionSection = () => {
                   key={m.title}
                   className="flex gap-4 items-start bg-card/80 backdrop-blur-sm rounded-xl px-5 py-5 border border-border hover:border-primary/30 hover:bg-card transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-primary" strokeWidth={1.8} />
+                  <div className={`w-10 h-10 rounded-lg ${brandColors[i % brandColors.length]} flex items-center justify-center flex-shrink-0`}>
+                    <Icon className="w-5 h-5" strokeWidth={1.8} />
                   </div>
                   <div>
                     <h3 className="font-display text-base font-bold text-foreground mb-1">{m.title}</h3>
