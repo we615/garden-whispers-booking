@@ -1,5 +1,5 @@
 import { Phone, Mail, MessageCircle, Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-wordmark.png";
 
 const Footer = () => {
   return (
