@@ -1,10 +1,9 @@
 import teamPortrait from "@/assets/team-portrait.png";
-import teamHindiBanner from "@/assets/team-hindi-banner.png";
 
 const IntroSection = () => {
   return (
     <section className="py-20 px-4 bg-secondary/30">
-      <div className="max-w-6xl mx-auto space-y-10">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -22,15 +21,6 @@ const IntroSection = () => {
               loading="lazy"
             />
           </div>
-        </div>
-
-        <div className="bg-card border border-border rounded-2xl p-3 shadow-sm">
-          <img
-            src={teamHindiBanner}
-            alt="EcoBloom care promise in Hindi"
-            className="w-full rounded-xl object-cover"
-            loading="lazy"
-          />
         </div>
       </div>
     </section>
