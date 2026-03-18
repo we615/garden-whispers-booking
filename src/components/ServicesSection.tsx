@@ -31,7 +31,7 @@ const ServicesSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">What We Do</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-blue mb-2">What We Do</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
             Premium Indoor & Outdoor Plant Care
           </h2>
