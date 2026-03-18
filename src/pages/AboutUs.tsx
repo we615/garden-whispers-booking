@@ -9,21 +9,25 @@ const values = [
     icon: Leaf,
     title: "Sustainability First",
     description: "We use 100% organic methods — no chemicals, no shortcuts. Just nature-friendly plant care that's good for your home and the planet.",
+    iconClass: "text-primary",
   },
   {
     icon: Heart,
     title: "Passion for Plants",
     description: "Every leaf matters to us. Our team of trained gardeners treats your plants with the same love and attention as their own.",
+    iconClass: "text-brand-red",
   },
   {
     icon: Users,
     title: "Community Driven",
     description: "We believe in building a greener community, one balcony, terrace, and garden at a time across Pune.",
+    iconClass: "text-brand-blue",
   },
   {
     icon: Target,
     title: "Personalized Approach",
     description: "No two gardens are the same. We create custom care plans tailored to your space, light, and lifestyle.",
+    iconClass: "text-accent",
   },
 ];
 
