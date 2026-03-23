@@ -65,7 +65,7 @@ const AboutUs = () => {
               EcoBloom started with a simple idea — everyone deserves a thriving garden without the hassle. We noticed that busy homeowners in Pune loved having plants but struggled to keep them healthy.
             </p>
             <p>
-              That's when we stepped in. With expert knowledge in organic plant care, soil health, pest management, and garden design, we created a complete end-to-end service that takes the stress out of gardening.
+              That's when we stepped in. With expert knowledge in natural plant care, soil health, pest management, and garden design, we created a complete end-to-end service that takes the stress out of gardening.
             </p>
             <p>
               Today, we care for hundreds of gardens across Pune, from cozy balcony setups to large terrace gardens. Our monthly maintenance plans, seasonal checkups, and green add-on services ensure your plants stay happy year-round.
