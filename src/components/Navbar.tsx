@@ -2,8 +2,7 @@ import { useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-full.png";
-import logoText from "@/assets/logo-text.png";
+import logoCombined from "@/assets/logo-combined.png";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
@@ -64,8 +63,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="w-full px-2 sm:px-4 flex items-center justify-between h-24 bg-gradient-to-b from-black/50 to-transparent">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="EcoBloom Plant Care" className="h-20 sm:h-24 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] brightness-110 [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
-          <img src={logoText} alt="EcoBloom" className="h-12 sm:h-14 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] brightness-110 [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]" />
+          <img src={logoCombined} alt="EcoBloom Plant Care" className="h-16 sm:h-20 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] brightness-110 rounded-xl [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
         </Link>
 
         {/* Desktop */}
