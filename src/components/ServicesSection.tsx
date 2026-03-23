@@ -4,25 +4,21 @@ import svcPruning from "@/assets/svc-pruning.jpg";
 import svcNutrients from "@/assets/svc-nutrients.jpg";
 import svcSetup from "@/assets/svc-setup.jpg";
 import svcKitchen from "@/assets/svc-kitchen.jpg";
-import svcHydroponics from "@/assets/svc-hydroponics.jpg";
 import svcVertical from "@/assets/svc-vertical.jpg";
-import svcTerrarium from "@/assets/svc-terrarium.jpg";
 import servicePest from "@/assets/service-pest.jpg";
 
 const coreServices = [
   { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions." },
   { img: svcRepotting, title: "Repotting & Transplanting", desc: "Safe shifting of plants into new pots with proper root protection." },
   { img: svcPruning, title: "Professional Cutting & Shaping", desc: "Expert trimming and styling to keep your plants lush and beautiful." },
-  { img: svcNutrients, title: "Organic Nutrient Management", desc: "Natural organic nutrition for stronger, greener plants at every growth stage." },
-  { img: servicePest, title: "Organic Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus." },
+  { img: svcNutrients, title: "Nutrient Management", desc: "Natural nutrition for stronger, greener plants at every growth stage." },
+  { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus." },
   { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery." },
 ];
 
 const addOnServices = [
   { img: svcKitchen, title: "Home Kitchen Vegetable Garden", desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your balcony." },
-  { img: svcHydroponics, title: "Hydroponics Setup & Maintenance", desc: "Soil-free growing systems installed and maintained for modern urban homes." },
   { img: svcVertical, title: "Vertical Garden — Installation & Care", desc: "Transform walls into living green spaces with professional vertical setups." },
-  { img: svcTerrarium, title: "Terrariums & HomeGreen Décor", desc: "Beautiful terrariums, vermicompost kits, and other green décor items." },
 ];
 
 const ServicesSection = () => {
