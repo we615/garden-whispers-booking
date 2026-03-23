@@ -51,7 +51,7 @@ const AboutUs = () => {
             We're EcoBloom Plant Care
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Founded in Pune, EcoBloom is a passionate team of plant lovers and trained gardeners dedicated to bringing life, color, and fresh air into your home — the organic way.
+            Founded in Pune, EcoBloom is a passionate team of plant lovers and trained gardeners dedicated to bringing life, color, and fresh air into your home — the natural way.
           </p>
         </div>
       </section>
