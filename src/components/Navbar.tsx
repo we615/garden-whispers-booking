@@ -38,7 +38,7 @@ const Navbar = () => {
   );
 
   const renderLink = (link: typeof navLinks[0], onClick?: () => void) => {
-    const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors";
+    const className = "text-sm font-semibold text-white/90 hover:text-white transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]";
     if (link.isRoute) {
       return (
         <Link to={link.href} onClick={onClick} className={className}>
@@ -61,11 +61,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
-      <div className="w-full px-2 sm:px-4 flex items-center justify-between h-24">
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="w-full px-2 sm:px-4 flex items-center justify-between h-24 bg-gradient-to-b from-black/50 to-transparent">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="EcoBloom Plant Care" className="h-20 sm:h-24 w-auto mix-blend-multiply dark:mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
-          <img src={logoText} alt="EcoBloom" className="h-12 sm:h-14 w-auto mix-blend-multiply dark:mix-blend-screen [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]" />
+          <img src={logo} alt="EcoBloom Plant Care" className="h-20 sm:h-24 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] brightness-110" />
+          <img src={logoText} alt="EcoBloom" className="h-12 sm:h-14 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] brightness-110" />
         </Link>
 
         {/* Desktop */}
