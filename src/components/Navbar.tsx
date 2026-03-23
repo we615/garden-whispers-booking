@@ -37,7 +37,7 @@ const Navbar = () => {
   );
 
   const renderLink = (link: typeof navLinks[0], onClick?: () => void) => {
-    const className = "text-sm font-semibold text-white/90 hover:text-white transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]";
+    const className = "text-sm font-semibold text-foreground/80 hover:text-primary transition-colors";
     if (link.isRoute) {
       return (
         <Link to={link.href} onClick={onClick} className={className}>
@@ -61,9 +61,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="w-full px-2 sm:px-4 flex items-center justify-between h-24 bg-gradient-to-b from-black/50 to-transparent">
+      <div className="w-full px-2 sm:px-4 flex items-center justify-between h-24 bg-white shadow-md">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoCombined} alt="EcoBloom Plant Care" className="h-16 sm:h-20 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" />
+          <img src={logoCombined} alt="EcoBloom Plant Care" className="h-16 sm:h-20 w-auto" />
         </Link>
 
         {/* Desktop */}
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-foreground/80" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
