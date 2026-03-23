@@ -8,7 +8,7 @@ const values = [
   {
     icon: Leaf,
     title: "Sustainability First",
-    description: "We use 100% organic methods — no chemicals, no shortcuts. Just nature-friendly plant care that's good for your home and the planet.",
+    description: "We use 100% natural methods — no chemicals, no shortcuts. Just nature-friendly plant care that's good for your home and the planet.",
     iconClass: "text-primary",
   },
   {
