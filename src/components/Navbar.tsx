@@ -38,7 +38,7 @@ const Navbar = () => {
   );
 
   const renderLink = (link: typeof navLinks[0], onClick?: () => void) => {
-    const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors";
+    const className = "text-sm font-semibold text-white/90 hover:text-white transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]";
     if (link.isRoute) {
       return (
         <Link to={link.href} onClick={onClick} className={className}>
