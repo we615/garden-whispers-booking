@@ -1,28 +1,25 @@
 
 
-## Plan: Multiple Updates
+## Plan: Replace Header Logo + Fix Broken Images
 
-### 1. Add EcoBloom text logo next to main logo in Navbar
-Copy the uploaded EcoBloom text logo (`image-35.png`) as `src/assets/logo-text.png`. Display it next to the existing house logo in the navbar at a complementary size.
+### 1. Replace Navbar logo with the uploaded combined logo
+Copy the uploaded `ChatGPT_Image_Mar_23_2026_04_51_07_PM.png` as `src/assets/logo-combined.png`. In `Navbar.tsx`, replace the two separate logo images (house logo + text logo) with this single combined image. Keep the feathered edge masking for smooth blending. Size it generously (h-16 sm:h-20).
 
-### 2. Hero heading: "We Make Spaces Bloom"
-Change `HeroSection.tsx` line 57 from "We Make Your Space Bloom" to "We Make Spaces Bloom".
+### 2. Fix broken/404 service and section images
+The following image files are broken (contain `<html><body>404</body></html>`):
+- `svc-pruning.jpg` — used in Services (Professional Cutting & Shaping)
+- `before-society.jpg` — used in Transformations
+- `before-office.jpg` — used in Transformations
+- `why-addon.jpg` — used in Why Us section
 
-### 3. Remove "Organic" word across the website
-Files affected:
-- **ServicesSection.tsx**: "Organic Nutrient Management" → "Nutrient Management", "Natural organic nutrition..." → "Natural nutrition...", "Organic Pest & Disease Control" → "Pest & Disease Control"
-- **WhyUsSection.tsx**: "100% Organic Solutions" → "100% Natural Solutions", "organic nutrition" → "natural nutrition"
-- **MissionSection.tsx**: "Eco-Friendly & Organic Practices" → "Eco-Friendly & Natural Practices"
-- **BookingForm.tsx**: "Organic Pest Control" → "Pest Control", "Organic Nutrient Management" → "Nutrient Management"
-- **AboutUs.tsx**: Remove/replace "organic" in 3 places with "natural" or similar wording
-
-### 4. Remove Hydroponics and Terrarium from Add-On Services
-In `ServicesSection.tsx`, remove the hydroponics and terrarium entries from `addOnServices` array, keeping only Kitchen Garden and Vertical Garden. Remove unused imports (`svcHydroponics`, `svcTerrarium`). Update the grid from `lg:grid-cols-4` to `sm:grid-cols-2` (2 items). Also update the add-on description text to remove mentions of hydroponics/terrariums.
-
-### 5. Remove "100% Organic Solutions" card from WhyUsSection
-Based on the circled screenshot (image-36), remove the "100% Organic Solutions" card entirely from the `reasons` array in `WhyUsSection.tsx`. Remove the `whyOrganic` import.
+Replace each with a relevant Unsplash stock photo:
+- **svc-pruning.jpg**: Plant pruning/trimming photo
+- **before-society.jpg**: Neglected garden/empty lawn photo
+- **before-office.jpg**: Bare office space photo
+- **why-addon.jpg**: Kitchen garden or green decor photo
 
 ### Technical Details
-- 7 files modified: Navbar, HeroSection, ServicesSection, WhyUsSection, MissionSection, BookingForm, AboutUs
-- 1 new asset: `logo-text.png`
+- **Files modified**: `Navbar.tsx` (swap 2 logo imports for 1 combined logo)
+- **Assets added**: 1 new logo file (`logo-combined.png`)
+- **Assets replaced**: 4 broken jpg files overwritten with real stock photos
 
