@@ -67,7 +67,7 @@ const ServicesSection = () => {
           </h2>
         </div>
         <p className="text-center text-muted-foreground text-base mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
-          Go beyond regular maintenance — kitchen gardens, hydroponics, terrariums, and more.
+          Go beyond regular maintenance — kitchen gardens, vertical gardens, and more.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
