@@ -64,8 +64,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 mr-auto">
-          <img src={logo} alt="EcoBloom Plant Care" className="h-12 sm:h-14 w-auto mix-blend-multiply dark:mix-blend-screen" />
-          <img src={logoText} alt="EcoBloom" className="h-8 sm:h-10 w-auto mix-blend-multiply dark:mix-blend-screen" />
+          <img src={logo} alt="EcoBloom Plant Care" className="h-12 sm:h-14 w-auto rounded-xl mix-blend-multiply dark:mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
+          <img src={logoText} alt="EcoBloom" className="h-8 sm:h-10 w-auto mix-blend-multiply dark:mix-blend-screen [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]" />
         </Link>
 
         {/* Desktop */}
