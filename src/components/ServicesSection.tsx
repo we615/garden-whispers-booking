@@ -1,3 +1,4 @@
+import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine } from "lucide-react";
 import svcSoil from "@/assets/svc-soil.jpg";
 import svcRepotting from "@/assets/svc-repotting.jpg";
 import svcPruning from "@/assets/svc-pruning.jpg";
@@ -8,12 +9,12 @@ import svcVertical from "@/assets/svc-vertical.jpg";
 import servicePest from "@/assets/service-pest.jpg";
 
 const coreServices = [
-  { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions." },
-  { img: svcRepotting, title: "Repotting & Transplanting", desc: "Safe shifting of plants into new pots with proper root protection." },
-  { img: svcPruning, title: "Professional Cutting & Shaping", desc: "Expert trimming and styling to keep your plants lush and beautiful." },
-  { img: svcNutrients, title: "Nutrient Management", desc: "Natural nutrition for stronger, greener plants at every growth stage." },
-  { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus." },
-  { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery." },
+  { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions.", icon: Droplets },
+  { img: svcRepotting, title: "Repotting & Transplanting", desc: "Safe shifting of plants into new pots with proper root protection.", icon: Sprout },
+  { img: svcPruning, title: "Professional Cutting & Shaping", desc: "Expert trimming and styling to keep your plants lush and beautiful.", icon: Scissors },
+  { img: svcNutrients, title: "Nutrient Management", desc: "Natural nutrition for stronger, greener plants at every growth stage.", icon: Leaf },
+  { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus.", icon: Bug },
+  { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery.", icon: TreePine },
 ];
 
 const addOnServices = [
@@ -23,7 +24,7 @@ const addOnServices = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 px-4">
+    <section id="services" className="py-28 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
@@ -32,34 +33,36 @@ const ServicesSection = () => {
             Premium Indoor & Outdoor Plant Care
           </h2>
         </div>
-        <p className="text-center text-muted-foreground text-base mb-16 max-w-2xl mx-auto font-medium leading-relaxed">
+        <p className="text-center text-muted-foreground text-base mb-20 max-w-2xl mx-auto font-medium leading-relaxed">
           From soil health to styling — we handle every aspect of your garden with expert, science-backed care.
         </p>
 
-        {/* Core Services — Alternating image+text rows */}
-        <div className="space-y-8 mb-28">
-          {coreServices.map((s, i) => (
+        {/* Core Services — Premium card grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mb-28">
+          {coreServices.map((s) => (
             <div
               key={s.title}
-              className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-6 items-center group`}
+              className="group relative rounded-2xl overflow-hidden bg-card border border-border shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] hover:-translate-y-1.5 transition-all duration-500"
             >
-              <div className="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)]">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="w-full md:w-1/2 md:px-8">
-                <div className={`w-12 h-1 rounded-full mb-4 ${i % 3 === 0 ? 'bg-brand-red' : i % 3 === 1 ? 'bg-brand-blue' : 'bg-accent'}`} />
-                <h3 className="font-display text-xl font-bold text-foreground mb-3 uppercase tracking-wide">{s.title}</h3>
-                <p className="text-base text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
+              <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary/90 flex items-center justify-center shadow-lg">
+                <s.icon className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-base font-bold text-foreground uppercase tracking-wide mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Add-On Services — Image card grid with overlay */}
+        {/* Add-On Services */}
         <div className="text-center mb-6">
           <p className="text-sm font-semibold tracking-widest uppercase text-brand-red mb-2">Explore More</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground tracking-tight uppercase">
@@ -70,13 +73,13 @@ const ServicesSection = () => {
           Go beyond regular maintenance — kitchen gardens, vertical gardens, and more.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
           {addOnServices.map((s) => (
             <div
               key={s.title}
-              className="group relative rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.12)] hover:shadow-[0_8px_30px_-4px_hsl(var(--foreground)/0.2)] transition-all duration-500"
+              className="group relative rounded-2xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500"
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.title}
@@ -84,9 +87,9 @@ const ServicesSection = () => {
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h3 className="font-display text-base font-bold text-white uppercase tracking-wide mb-2">{s.title}</h3>
-                <p className="text-sm text-white/80 leading-relaxed font-medium">{s.desc}</p>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="font-display text-lg font-bold text-white uppercase tracking-wide mb-2">{s.title}</h3>
+                <p className="text-sm text-white/85 leading-relaxed font-medium">{s.desc}</p>
               </div>
             </div>
           ))}
