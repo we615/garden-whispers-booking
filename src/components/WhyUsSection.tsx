@@ -1,7 +1,6 @@
 import whyExpert from "@/assets/team-repotting.png";
 import whyPersonalized from "@/assets/why-personalized.jpg";
 import whyHealthy from "@/assets/why-healthy.jpg";
-import whyOrganic from "@/assets/team-spraying.png";
 import whyWeekly from "@/assets/team-pruning.png";
 import whyAddon from "@/assets/why-addon.jpg";
 
@@ -9,9 +8,8 @@ const reasons = [
   { img: whyExpert, title: "Expert Professional Plant Care", desc: "We understand plant nutrition, watering cycles, soil health, and pest prevention scientifically. All our caretakers are trained professionals." },
   { img: whyPersonalized, title: "Personalized Care Plans", desc: "Every balcony, home, or office has a different environment. We design care based on sunlight, humidity, and plant type." },
   { img: whyHealthy, title: "Healthy & Aesthetic Growth", desc: "We focus on both beauty and long-term plant health — not just maintenance, but real, lasting growth." },
-  { img: whyOrganic, title: "100% Organic Solutions", desc: "No harmful chemicals. We use organic nutrition, safe pest control, and premium pruning tools." },
   { img: whyWeekly, title: "Regular Weekly Visits & Monitoring", desc: "We do weekly visits to track growth, spot early issues, and give progress updates." },
-  { img: whyAddon, title: "Customized Add-On Services", desc: "Kitchen garden setup, vertical gardens, hydroponics, terrariums, kokedama, and all other green décor needs." },
+  { img: whyAddon, title: "Customized Add-On Services", desc: "Kitchen garden setup, vertical gardens, and all other green décor needs." },
 ];
 
 const WhyUsSection = () => {

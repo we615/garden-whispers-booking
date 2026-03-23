@@ -8,7 +8,7 @@ const values = [
   {
     icon: Leaf,
     title: "Sustainability First",
-    description: "We use 100% organic methods — no chemicals, no shortcuts. Just nature-friendly plant care that's good for your home and the planet.",
+    description: "We use 100% natural methods — no chemicals, no shortcuts. Just nature-friendly plant care that's good for your home and the planet.",
     iconClass: "text-primary",
   },
   {
@@ -51,7 +51,7 @@ const AboutUs = () => {
             We're EcoBloom Plant Care
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Founded in Pune, EcoBloom is a passionate team of plant lovers and trained gardeners dedicated to bringing life, color, and fresh air into your home — the organic way.
+            Founded in Pune, EcoBloom is a passionate team of plant lovers and trained gardeners dedicated to bringing life, color, and fresh air into your home — the natural way.
           </p>
         </div>
       </section>
@@ -65,7 +65,7 @@ const AboutUs = () => {
               EcoBloom started with a simple idea — everyone deserves a thriving garden without the hassle. We noticed that busy homeowners in Pune loved having plants but struggled to keep them healthy.
             </p>
             <p>
-              That's when we stepped in. With expert knowledge in organic plant care, soil health, pest management, and garden design, we created a complete end-to-end service that takes the stress out of gardening.
+              That's when we stepped in. With expert knowledge in natural plant care, soil health, pest management, and garden design, we created a complete end-to-end service that takes the stress out of gardening.
             </p>
             <p>
               Today, we care for hundreds of gardens across Pune, from cozy balcony setups to large terrace gardens. Our monthly maintenance plans, seasonal checkups, and green add-on services ensure your plants stay happy year-round.

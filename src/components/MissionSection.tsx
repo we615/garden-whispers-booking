@@ -11,7 +11,7 @@ const missions = [
   { icon: Home, title: "Greener & Healthier Spaces", desc: "Natural, eco-friendly homes and workplaces that feel fresh, calm, and full of life." },
   { icon: Flower2, title: "Relaxing & Aesthetic Balconies", desc: "Making every balcony beautiful and green, helping you feel refreshed and connected with nature." },
   { icon: Wrench, title: "Easy & Professional Plant Care", desc: "Reliable, scientific, and hassle-free plant maintenance for everyone." },
-  { icon: Leaf, title: "Eco-Friendly & Organic Practices", desc: "Natural growth solutions that protect your plants, your home, and the planet." },
+  { icon: Leaf, title: "Eco-Friendly & Natural Practices", desc: "Natural growth solutions that protect your plants, your home, and the planet." },
   { icon: Salad, title: "Grow What You Eat", desc: "Inspiring households to grow vegetables and herbs for a healthy, toxin-free lifestyle." },
   { icon: FlaskConical, title: "Scientific Green Aesthetics", desc: "Long-lasting beauty with expert plant selection, nutrient care, and pest safety." },
   { icon: TreePine, title: "Cleaner & Greener Cities", desc: "Helping cities breathe cleaner and live greener through sustainable urban gardening." },

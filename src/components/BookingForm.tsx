@@ -7,13 +7,11 @@ const serviceOptions = [
   { value: "monthly-maintenance", label: "🌿 Monthly Plant Maintenance" },
   { value: "soil-checkup", label: "🧪 Soil & Plant Health Checkup" },
   { value: "repotting", label: "🪴 Repotting & Transplanting" },
-  { value: "pest-control", label: "🐛 Organic Pest Control" },
-  { value: "nutrients", label: "🧬 Organic Nutrient Management" },
+  { value: "pest-control", label: "🐛 Pest Control" },
+  { value: "nutrients", label: "🧬 Nutrient Management" },
   { value: "pruning", label: "✂️ Pruning & Shaping" },
   { value: "kitchen-garden", label: "🥬 Kitchen Garden Setup" },
-  { value: "hydroponics", label: "💧 Hydroponics Setup" },
   { value: "vertical-garden", label: "🌱 Vertical Garden Installation" },
-  { value: "terrarium", label: "🏡 Terrariums & Green Décor" },
 ];
 
 const timeSlots = [
