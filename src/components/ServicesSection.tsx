@@ -8,7 +8,7 @@ import svcKitchen from "@/assets/svc-kitchen.jpg";
 import svcVertical from "@/assets/svc-vertical.jpg";
 import servicePest from "@/assets/service-pest.jpg";
 import svcGardenDesign from "@/assets/svc-garden-design.jpg";
-import svcConsultation from "@/assets/why-personalized.jpg";
+import svcConsultation from "@/assets/team-delivery.jpg";
 
 const coreServices = [
   { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions.", icon: Droplets },
@@ -87,7 +87,7 @@ const ServicesSection = () => {
                 <img
                   src={s.img}
                   alt={s.title}
-                  className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${s.title === "Plants Consultation" ? "object-[center_20%]" : ""}`}
+                  className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${s.title === "Plants Consultation" ? "object-[center_30%]" : ""}`}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

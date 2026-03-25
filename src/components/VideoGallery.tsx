@@ -1,11 +1,29 @@
 import { Play } from "lucide-react";
 import { useRef, useState } from "react";
+import snakePlant from "@/assets/snake-plant.jpg";
+import zzPlant from "@/assets/zz-plant.jpg";
+
 const videos = [
   {
     src: "/videos/ecobloom-work-3.mp4",
     title: "Indoor Plant Styling",
     desc: "Watch how we transform indoor spaces with expert green décor.",
   },
+  {
+    src: "/videos/ecobloom-work-4.mp4",
+    title: "Plant Care in Action",
+    desc: "Our team ensuring every plant gets the attention it deserves.",
+  },
+  {
+    src: "/videos/ecobloom-work-5.mp4",
+    title: "Green Space Setup",
+    desc: "From delivery to placement — see how we bring life to your spaces.",
+  },
+];
+
+const galleryImages = [
+  { src: snakePlant, alt: "Snake plant in office space" },
+  { src: zzPlant, alt: "ZZ plant on desk" },
 ];
 
 const VideoCard = ({ src, title, desc }: { src: string; title: string; desc: string }) => {
@@ -63,12 +81,20 @@ const VideoGallery = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 max-w-sm mx-auto gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-4xl mx-auto">
           {videos.map((v) => (
             <VideoCard key={v.src} {...v} />
           ))}
         </div>
 
+        {/* Photo gallery */}
+        <div className="grid grid-cols-2 gap-5 mt-10 max-w-2xl mx-auto">
+          {galleryImages.map((img) => (
+            <div key={img.alt} className="rounded-2xl overflow-hidden border border-border shadow-sm">
+              <img src={img.src} alt={img.alt} className="w-full h-64 object-cover object-center" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
