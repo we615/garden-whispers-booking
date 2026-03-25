@@ -4,19 +4,9 @@ import decorPlant from "@/assets/decor-plant.jpg";
 
 const videos = [
   {
-    src: "/videos/ecobloom-work-1.mp4",
+    src: "/videos/ecobloom-work-3.mp4",
     title: "Indoor Plant Styling",
     desc: "Watch how we transform indoor spaces with expert green décor.",
-  },
-  {
-    src: "/videos/ecobloom-work-2.mp4",
-    title: "Balcony Garden Setup",
-    desc: "Full balcony makeover — from bare rails to a thriving garden.",
-  },
-  {
-    src: "/videos/ecobloom-work-3.mp4",
-    title: "Vertical Garden Care",
-    desc: "Professional care and maintenance of living green walls.",
   },
 ];
 
