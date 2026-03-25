@@ -65,7 +65,7 @@ const VideoGallery = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 max-w-sm mx-auto gap-7">
           {videos.map((v) => (
             <VideoCard key={v.src} {...v} />
           ))}
