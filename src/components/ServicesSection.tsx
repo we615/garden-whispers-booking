@@ -7,6 +7,8 @@ import svcSetup from "@/assets/svc-setup.jpg";
 import svcKitchen from "@/assets/svc-kitchen.jpg";
 import svcVertical from "@/assets/svc-vertical.jpg";
 import servicePest from "@/assets/service-pest.jpg";
+import svcGardenDesign from "@/assets/svc-garden-design.jpg";
+import svcConsultation from "@/assets/why-personalized.jpg";
 
 const coreServices = [
   { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions.", icon: Droplets },
@@ -20,6 +22,8 @@ const coreServices = [
 const addOnServices = [
   { img: svcKitchen, title: "Home Kitchen Vegetable Garden", desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your balcony." },
   { img: svcVertical, title: "Vertical Garden — Installation & Care", desc: "Transform walls into living green spaces with professional vertical setups." },
+  { img: svcGardenDesign, title: "Design Your Garden", desc: "Custom garden layouts crafted to match your space, style, and vision." },
+  { img: svcConsultation, title: "Plants Consultation", desc: "One-on-one expert guidance to choose the right plants and care routines for your home." },
 ];
 
 const ServicesSection = () => {
