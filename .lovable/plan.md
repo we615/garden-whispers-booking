@@ -1,25 +1,39 @@
 
 
-## Plan: Replace Header Logo + Fix Broken Images
+## Plan: Fix Image Issues Across Multiple Sections
 
-### 1. Replace Navbar logo with the uploaded combined logo
-Copy the uploaded `ChatGPT_Image_Mar_23_2026_04_51_07_PM.png` as `src/assets/logo-combined.png`. In `Navbar.tsx`, replace the two separate logo images (house logo + text logo) with this single combined image. Keep the feathered edge masking for smooth blending. Size it generously (h-16 sm:h-20).
+### Issues Identified
 
-### 2. Fix broken/404 service and section images
-The following image files are broken (contain `<html><body>404</body></html>`):
-- `svc-pruning.jpg` — used in Services (Professional Cutting & Shaping)
-- `before-society.jpg` — used in Transformations
-- `before-office.jpg` — used in Transformations
-- `why-addon.jpg` — used in Why Us section
+1. **Decorative plant image (image-53)** — Currently displayed separately at the bottom of VideoGallery section with `object-cover` cropping it. Should be moved to the "Plants Setup & Green Décor" service card in ServicesSection where it contextually belongs, and displayed without cropping.
 
-Replace each with a relevant Unsplash stock photo:
-- **svc-pruning.jpg**: Plant pruning/trimming photo
-- **before-society.jpg**: Neglected garden/empty lawn photo
-- **before-office.jpg**: Bare office space photo
-- **why-addon.jpg**: Kitchen garden or green decor photo
+2. **Consultation image (image-54)** — Used as `svcConsultation` (mapped to `why-personalized.jpg`), face is cut off due to `object-cover` on the add-on card. Fix by using `object-top` positioning so the face stays visible.
 
-### Technical Details
-- **Files modified**: `Navbar.tsx` (swap 2 logo imports for 1 combined logo)
-- **Assets added**: 1 new logo file (`logo-combined.png`)
-- **Assets replaced**: 4 broken jpg files overwritten with real stock photos
+3. **Design Your Garden** — `svc-garden-design.jpg` is an empty/broken file. Replace with a relevant open-source garden design photo from Unsplash.
+
+4. **Before & After images don't match** — The before/after pairs aren't realistic transformation pairs. Replace all 6 images with realistic open-source before/after garden transformation photos from Unsplash.
+
+### Changes
+
+#### 1. Move decorative plant image to ServicesSection
+- Replace `svc-setup.jpg` (Plants Setup & Green Décor) with the uploaded `image-53.png` (the dracaena plant photo)
+- Remove the decorative image block from `VideoGallery.tsx` (lines 74-82) and the `decor-plant.jpg` import
+
+#### 2. Fix face cropping on Plants Consultation card
+- In `ServicesSection.tsx`, update the add-on card image styling to use `object-top` specifically for the consultation card, so the person's face isn't cut off
+
+#### 3. Replace broken Design Your Garden image
+- Overwrite `svc-garden-design.jpg` with a relevant Unsplash stock photo of a designed garden landscape
+
+#### 4. Replace Before & After images with realistic Unsplash photos
+- Replace all 6 before/after images with matching pairs from Unsplash:
+  - **Balcony**: neglected balcony → lush green balcony
+  - **Society Garden**: barren lawn → landscaped garden
+  - **Office**: bare office → green office space
+
+### Files Modified
+- `src/assets/svc-setup.jpg` — overwrite with uploaded image-53
+- `src/components/VideoGallery.tsx` — remove decorative image block
+- `src/components/ServicesSection.tsx` — add `object-top` for consultation card
+- `src/assets/svc-garden-design.jpg` — replace with Unsplash stock photo
+- `src/assets/before-balcony.jpg`, `after-balcony.jpg`, `before-society.jpg`, `after-society.jpg`, `before-office.jpg`, `after-office.jpg` — replace with realistic Unsplash pairs
 
