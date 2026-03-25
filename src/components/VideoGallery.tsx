@@ -1,7 +1,5 @@
 import { Play } from "lucide-react";
 import { useRef, useState } from "react";
-import decorPlant from "@/assets/decor-plant.jpg";
-
 const videos = [
   {
     src: "/videos/ecobloom-work-3.mp4",
