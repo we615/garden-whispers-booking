@@ -1,8 +1,8 @@
-import whyExpert from "@/assets/team-repotting.png";
+import whyExpert from "@/assets/calathea-desk.jpg";
 import whyPersonalized from "@/assets/why-personalized.jpg";
 import whyHealthy from "@/assets/why-healthy.jpg";
 import whyWeekly from "@/assets/team-pruning.png";
-import whyAddon from "@/assets/why-addon.jpg";
+import whyAddon from "@/assets/nursery-plants.jpg";
 
 const reasons = [
   { img: whyExpert, title: "Expert Professional Plant Care", desc: "We understand plant nutrition, watering cycles, soil health, and pest prevention scientifically. All our caretakers are trained professionals." },

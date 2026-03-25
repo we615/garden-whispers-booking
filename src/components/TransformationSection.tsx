@@ -2,8 +2,8 @@ import beforeBalcony from "@/assets/before-balcony.jpg";
 import afterBalcony from "@/assets/after-balcony.jpg";
 import beforeSociety from "@/assets/before-society.jpg";
 import afterSociety from "@/assets/after-society.jpg";
-import beforeOffice from "@/assets/before-office.jpg";
-import afterOffice from "@/assets/after-office.jpg";
+import afterOffice from "@/assets/office-plants.jpg";
+import beforeOffice from "@/assets/rubber-plant-office.jpg";
 
 const transformations = [
   { title: "Balcony Transformation", before: beforeBalcony, after: afterBalcony },
