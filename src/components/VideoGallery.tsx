@@ -1,7 +1,5 @@
 import { Play } from "lucide-react";
 import { useRef, useState } from "react";
-import decorPlant from "@/assets/decor-plant.jpg";
-
 const videos = [
   {
     src: "/videos/ecobloom-work-3.mp4",
@@ -71,15 +69,6 @@ const VideoGallery = () => {
           ))}
         </div>
 
-        {/* Decorative highlight image */}
-        <div className="mt-14 rounded-2xl overflow-hidden shadow-[0_8px_30px_-6px_hsl(var(--foreground)/0.15)] max-w-2xl mx-auto">
-          <img
-            src={decorPlant}
-            alt="Beautiful indoor plant décor by EcoBloom"
-            className="w-full h-72 sm:h-96 object-cover"
-            loading="lazy"
-          />
-        </div>
       </div>
     </section>
   );
