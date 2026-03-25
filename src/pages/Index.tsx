@@ -8,6 +8,7 @@ import HowItWorks from "@/components/HowItWorks";
 import PricingSection from "@/components/PricingSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import TransformationSection from "@/components/TransformationSection";
+import VideoGallery from "@/components/VideoGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
