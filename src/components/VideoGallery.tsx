@@ -1,29 +1,35 @@
 import { Play } from "lucide-react";
 import { useRef, useState } from "react";
-import snakePlant from "@/assets/snake-plant.jpg";
-import zzPlant from "@/assets/zz-plant.jpg";
 
-const videos = [
+const generalVideos = [
   {
     src: "/videos/ecobloom-work-3.mp4",
     title: "Indoor Plant Styling",
     desc: "Watch how we transform indoor spaces with expert green décor.",
   },
   {
-    src: "/videos/ecobloom-work-4.mp4",
+    src: "/videos/ecobloom-work-6.mp4",
     title: "Plant Care in Action",
     desc: "Our team ensuring every plant gets the attention it deserves.",
   },
-  {
-    src: "/videos/ecobloom-work-5.mp4",
-    title: "Green Space Setup",
-    desc: "From delivery to placement — see how we bring life to your spaces.",
-  },
 ];
 
-const galleryImages = [
-  { src: snakePlant, alt: "Snake plant in office space" },
-  { src: zzPlant, alt: "ZZ plant on desk" },
+const corporateVideos = [
+  {
+    src: "/videos/corporate-1.mp4",
+    title: "Office Green Setup",
+    desc: "Transforming corporate spaces with lush indoor greenery.",
+  },
+  {
+    src: "/videos/corporate-2.mp4",
+    title: "Workspace Plant Care",
+    desc: "Professional plant maintenance for modern workspaces.",
+  },
+  {
+    src: "/videos/corporate-3.mp4",
+    title: "Corporate Landscaping",
+    desc: "Complete green makeovers for office environments.",
+  },
 ];
 
 const VideoCard = ({ src, title, desc }: { src: string; title: string; desc: string }) => {
@@ -81,18 +87,23 @@ const VideoGallery = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-4xl mx-auto">
-          {videos.map((v) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 max-w-3xl mx-auto">
+          {generalVideos.map((v) => (
             <VideoCard key={v.src} {...v} />
           ))}
         </div>
 
-        {/* Photo gallery */}
-        <div className="grid grid-cols-2 gap-5 mt-10 max-w-2xl mx-auto">
-          {galleryImages.map((img) => (
-            <div key={img.alt} className="rounded-2xl overflow-hidden border border-border shadow-sm">
-              <img src={img.src} alt={img.alt} className="w-full h-64 object-cover object-center" />
-            </div>
+        {/* Corporate Offices */}
+        <div className="text-center mt-16 mb-10">
+          <p className="text-sm font-semibold tracking-widest uppercase text-brand-red mb-2">Corporate Offices</p>
+          <h3 className="font-display text-2xl sm:text-3xl font-bold text-foreground uppercase tracking-[0.12em]">
+            Green Workspaces
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-4xl mx-auto">
+          {corporateVideos.map((v) => (
+            <VideoCard key={v.src} {...v} />
           ))}
         </div>
       </div>
