@@ -1,39 +1,38 @@
 
 
-## Plan: Fix Image Issues Across Multiple Sections
+## Plan: Multiple Image/Video Updates & Text Fix
 
-### Issues Identified
+### 1. Replace "Customized Add-On Services" image in Why Us section
+- Copy `image-58` (balcony garden photo) to `src/assets/nursery-plants.jpg` (overwrite) — this is used by `whyAddon` in WhyUsSection
 
-1. **Decorative plant image (image-53)** — Currently displayed separately at the bottom of VideoGallery section with `object-cover` cropping it. Should be moved to the "Plants Setup & Green Décor" service card in ServicesSection where it contextually belongs, and displayed without cropping.
+### 2. Update Video Gallery — restructure into 2 categories
+- **Keep** `ecobloom-work-3.mp4` ("Indoor Plant Styling")
+- **Add** `WhatsApp_Video_2026-03-26_at_14.16.59.mp4` as 2nd video (copy to `public/videos/ecobloom-work-6.mp4`)
+- **Remove** `ecobloom-work-4.mp4` and `ecobloom-work-5.mp4`
+- **Add new "Corporate Offices" category** with the 3 latest videos:
+  - `WhatsApp_Video_2026-03-30_at_12.30.13.mp4` → `public/videos/corporate-1.mp4`
+  - `WhatsApp_Video_2026-03-30_at_12.30.11.mp4` → `public/videos/corporate-2.mp4`
+  - `WhatsApp_Video_2026-03-30_at_12.30.07.mp4` → `public/videos/corporate-3.mp4`
+- Update `VideoGallery.tsx`: two video arrays, two grid sections with "Corporate Offices" sub-header
+- Remove photo gallery (snake plant / zz plant images) to keep section clean
 
-2. **Consultation image (image-54)** — Used as `svcConsultation` (mapped to `why-personalized.jpg`), face is cut off due to `object-cover` on the add-on card. Fix by using `object-top` positioning so the face stays visible.
+### 3. Remove "BSc" from IntroSection
+- In `src/components/IntroSection.tsx` line 13, change "two BSc Agriculture graduates" to "two Agriculture graduates"
 
-3. **Design Your Garden** — `svc-garden-design.jpg` is an empty/broken file. Replace with a relevant open-source garden design photo from Unsplash.
+### 4. Replace "Regular Weekly Visits" image in Why Us
+- Copy `image-60` (team member arranging plants on office desk) to `src/assets/team-pruning.png` (overwrite) — used by `whyWeekly`
 
-4. **Before & After images don't match** — The before/after pairs aren't realistic transformation pairs. Replace all 6 images with realistic open-source before/after garden transformation photos from Unsplash.
-
-### Changes
-
-#### 1. Move decorative plant image to ServicesSection
-- Replace `svc-setup.jpg` (Plants Setup & Green Décor) with the uploaded `image-53.png` (the dracaena plant photo)
-- Remove the decorative image block from `VideoGallery.tsx` (lines 74-82) and the `decor-plant.jpg` import
-
-#### 2. Fix face cropping on Plants Consultation card
-- In `ServicesSection.tsx`, update the add-on card image styling to use `object-top` specifically for the consultation card, so the person's face isn't cut off
-
-#### 3. Replace broken Design Your Garden image
-- Overwrite `svc-garden-design.jpg` with a relevant Unsplash stock photo of a designed garden landscape
-
-#### 4. Replace Before & After images with realistic Unsplash photos
-- Replace all 6 before/after images with matching pairs from Unsplash:
-  - **Balcony**: neglected balcony → lush green balcony
-  - **Society Garden**: barren lawn → landscaped garden
-  - **Office**: bare office → green office space
+### 5. Replace "Nutrient Management" image in Services
+- Copy `image-61` (team member watering plant) to `src/assets/svc-nutrients.jpg` (overwrite) — used by `svcNutrients`
 
 ### Files Modified
-- `src/assets/svc-setup.jpg` — overwrite with uploaded image-53
-- `src/components/VideoGallery.tsx` — remove decorative image block
-- `src/components/ServicesSection.tsx` — add `object-top` for consultation card
-- `src/assets/svc-garden-design.jpg` — replace with Unsplash stock photo
-- `src/assets/before-balcony.jpg`, `after-balcony.jpg`, `before-society.jpg`, `after-society.jpg`, `before-office.jpg`, `after-office.jpg` — replace with realistic Unsplash pairs
+- `src/assets/nursery-plants.jpg` — overwrite with balcony garden
+- `src/assets/team-pruning.png` — overwrite with office desk plants photo
+- `src/assets/svc-nutrients.jpg` — overwrite with watering photo
+- `public/videos/ecobloom-work-6.mp4` — new video
+- `public/videos/corporate-1.mp4`, `corporate-2.mp4`, `corporate-3.mp4` — new videos
+- `public/videos/ecobloom-work-4.mp4` — delete
+- `public/videos/ecobloom-work-5.mp4` — delete
+- `src/components/VideoGallery.tsx` — restructure with 2 categories
+- `src/components/IntroSection.tsx` — remove "BSc"
 
