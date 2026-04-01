@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const plantOptions = [10, 20, 30, 40, 50, 75, 100];
 
 const pricingData: Record<number, { monthly: number; threeMonth: number; sixMonth: number; yearly: number }> = {
-  10:  { monthly: 1200,  threeMonth: 3240,  sixMonth: 6480,  yearly: 11040 },
+  10:  { monthly: 1200,  threeMonth: 3240,  sixMonth: 6000,  yearly: 11040 },
   20:  { monthly: 2400,  threeMonth: 6480,  sixMonth: 12000, yearly: 21120 },
   30:  { monthly: 3600,  threeMonth: 9720,  sixMonth: 18000, yearly: 31680 },
   40:  { monthly: 4800,  threeMonth: 12480, sixMonth: 24000, yearly: 40320 },
