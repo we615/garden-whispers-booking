@@ -1,25 +1,41 @@
 
 
-## Plan: Update Hero Subtext, Consultation Card, and Add Client Logo
+## Plan: Add CTA Section, Floating WhatsApp Button, and More Testimonials
 
-### 1. Fix hero subtext (HeroSection.tsx)
-The subtext on line 60 appears to already have the correct text, but based on user feedback it hasn't changed in the preview. Will re-apply the exact text without em dashes to match user's request:
-> "Professional plant care and garden maintenance services across Pune and PCMC driven by expertise, backed by passion.We combine scientific plant care with thoughtful design to revive, protect, and elevate your green spaces all under one roof.Create a space that feels alive, thriving, and beautifully green."
+### 1. Add "Not Sure Where to Begin?" CTA Section
+**New file: `src/components/CtaBanner.tsx`**
 
-### 2. Update "Plants Consultation" add-on card (ServicesSection.tsx)
-- Change title from "Plants Consultation" to "EcoBloom DIY Care Kit with Expert Plants Consultation Visit"
-- Replace description with the new multi-paragraph content about EcoBloom Care Kit
-- Replace image: copy `image-87.png` (DIY Care Kit photo) to `src/assets/svc-consultation.jpg` and update the import
-- Since the description is long, may need to adjust the card's text area or aspect ratio
+A dark green banner section placed between the Pricing section and the next section (Why Us). Contains:
+- Subtext: "LET OUR EXPERTS HELP YOU CHOOSE THE RIGHT PLAN FOR YOUR GARDEN."
+- Heading: "NOT SURE WHERE TO BEGIN?"
+- Yellow/accent "Talk to Our Care Team" button linking to WhatsApp (`https://wa.me/919270993102`)
 
-### 3. Add new client logo (ClientsSection.tsx)
-- Copy `image-88.png` (Kalpataru Regency I) to `src/assets/clients/kalpataru.png`
-- Add to clients array and ensure alignment remains consistent
+Update `src/pages/Index.tsx` to import and place `<CtaBanner />` after `<PricingSection />`.
 
-### Files Modified
-- `src/components/HeroSection.tsx` -- fix subtext
-- `src/components/ServicesSection.tsx` -- update consultation card title, desc, image
-- `src/components/ClientsSection.tsx` -- add Kalpataru Regency I logo
-- `src/assets/svc-consultation.jpg` -- new image (DIY kit photo)
-- `src/assets/clients/kalpataru.png` -- new client logo
+### 2. Add Floating WhatsApp Button
+**New file: `src/components/FloatingWhatsApp.tsx`**
+
+A fixed-position button in the bottom-right corner with:
+- WhatsApp icon
+- "Get FREE Plant Diagnosis 🌿" label text
+- Sub-line: "Send your plant photo on WhatsApp and get expert advice instantly"
+- Links to `https://wa.me/919270993102`
+- Styled with green WhatsApp brand color, subtle shadow, always visible
+
+Add it to `src/pages/Index.tsx` (or `App.tsx`) so it appears on all pages.
+
+### 3. Add More Testimonials
+**Edit: `src/components/TestimonialsSection.tsx`**
+
+Add these testimonials to the array plus a few more to fill out the grid:
+- "EcoBloom saved my plants — they look fresh and healthy now!" — Rahul, Pune
+- "Very professional service, highly recommended." — Sneha, Wakad
+
+Change the layout to accommodate more cards (e.g., 2 rows of 3, or a scrollable carousel). Use a simpler quote-style card format for the new entries (just quote + name + location, no time/rating needed).
+
+### Files Changed
+- `src/components/CtaBanner.tsx` (new)
+- `src/components/FloatingWhatsApp.tsx` (new)
+- `src/components/TestimonialsSection.tsx` (edit)
+- `src/pages/Index.tsx` (edit)
 
