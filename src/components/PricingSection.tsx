@@ -33,10 +33,10 @@ const PricingSection = () => {
   const savingsYear = Math.round(((data.monthly * 12 - data.yearly) / (data.monthly * 12)) * 100);
 
   const plans = [
-    { label: "1 Month", total: data.monthly, perMonth: data.monthly, badge: null, freeVisits: null },
-    { label: "3 Months", total: data.threeMonth, perMonth: rates.threeMonth, badge: "10% Off", freeVisits: null },
-    { label: "6 Months", total: data.sixMonth, perMonth: rates.sixMonth, badge: "Save More", freeVisits: "1 Free Visit" },
-    { label: "1 Year", total: data.yearly, perMonth: rates.yearly, badge: `${savingsYear}% Off`, freeVisits: "4 Free Visits", best: true },
+    { label: "1 Month", total: data.monthly, perMonth: data.monthly, badge: null, freeVisits: null, desc: "Weekly 1 plant care visit • Health checkup, pruning, fertilizing & pest control" },
+    { label: "3 Months", total: data.threeMonth, perMonth: rates.threeMonth, badge: "10% Off", freeVisits: null, desc: "Weekly 1 visit • Soil treatment, repotting & seasonal care included" },
+    { label: "6 Months", total: data.sixMonth, perMonth: rates.sixMonth, badge: "Save More", freeVisits: "1 Free Visit", desc: "Weekly 1 visit • Complete garden maintenance, new plant guidance & 1 free bonus visit" },
+    { label: "1 Year", total: data.yearly, perMonth: rates.yearly, badge: `${savingsYear}% Off`, freeVisits: "4 Free Visits", best: true, desc: "Weekly 1 visit • Full care cycle, seasonal planning, repotting & 4 free bonus visits" },
   ];
 
   return (
