@@ -3,6 +3,7 @@ import redsky from "@/assets/clients/redsky.png";
 import lifesaving from "@/assets/clients/lifesaving.png";
 import enversys from "@/assets/clients/enversys.jpg";
 import planetEnviro from "@/assets/clients/planet-enviro.jpg";
+import kalpataru from "@/assets/clients/kalpataru.png";
 
 const clients = [
   { name: "Spurx", logo: spurx },
@@ -10,6 +11,7 @@ const clients = [
   { name: "Life Saving India", logo: lifesaving },
   { name: "Enversys Greentek Solutions", logo: enversys },
   { name: "Planet Enviro Services", logo: planetEnviro },
+  { name: "Kalpataru Regency I", logo: kalpataru },
 ];
 
 const ClientsSection = () => {

@@ -57,7 +57,7 @@ const HeroSection = () => {
           We Make Spaces<br />Bloom 🌿
         </h1>
         <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
-          Professional plant care and garden maintenance services across Pune and PCMC — driven by expertise, backed by passion. We combine scientific plant care with thoughtful design to revive, protect, and elevate your green spaces, all under one roof. Create a space that feels alive, thriving, and beautifully green.
+          Professional plant care and garden maintenance services across Pune and PCMC driven by expertise, backed by passion. We combine scientific plant care with thoughtful design to revive, protect, and elevate your green spaces all under one roof. Create a space that feels alive, thriving, and beautifully green.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold shadow-lg px-8">
