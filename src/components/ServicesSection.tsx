@@ -92,8 +92,8 @@ const ServicesSection = () => {
 
 const AddOnCard = ({ service: s }: { service: { img: string; title: string; desc: string } }) => {
   const [expanded, setExpanded] = useState(false);
-  const isLong = s.desc.length > 120;
-  const displayDesc = isLong && !expanded ? s.desc.slice(0, 120) + "..." : s.desc;
+  const isLong = s.desc.length > 60;
+  const displayDesc = isLong && !expanded ? s.desc.slice(0, 60) + "..." : s.desc;
 
   return (
     <div className="group relative rounded-2xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500">
