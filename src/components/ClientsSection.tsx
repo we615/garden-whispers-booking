@@ -24,9 +24,9 @@ const ClientsSection = () => {
             Our Clients
           </h2>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-14">
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-8 sm:gap-10">
           {clients.map((client) => (
-            <div key={client.name} className="flex flex-col items-center gap-3">
+            <div key={client.name} className="flex flex-col items-center">
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-card border border-border shadow-sm flex items-center justify-center p-3 overflow-hidden">
                 <img
                   src={client.logo}
@@ -35,7 +35,7 @@ const ClientsSection = () => {
                   loading="lazy"
                 />
               </div>
-              <p className="text-sm font-semibold text-muted-foreground text-center max-w-[120px]">{client.name}</p>
+              <p className="text-sm font-semibold text-muted-foreground text-center mt-3 h-10 flex items-start justify-center">{client.name}</p>
             </div>
           ))}
         </div>
