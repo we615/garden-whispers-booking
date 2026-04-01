@@ -9,7 +9,7 @@ import svcKitchen from "@/assets/svc-kitchen.jpg";
 import svcVertical from "@/assets/svc-vertical.jpg";
 import servicePest from "@/assets/service-pest.jpg";
 import svcGardenDesign from "@/assets/svc-garden-design.jpg";
-import svcConsultation from "@/assets/team-delivery.jpg";
+import svcConsultation from "@/assets/svc-consultation.jpg";
 
 const coreServices = [
   { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions.", icon: Droplets },
