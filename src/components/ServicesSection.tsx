@@ -10,7 +10,19 @@ import svcKitchen from "@/assets/svc-kitchen.jpg";
 import svcVertical from "@/assets/svc-vertical.jpg";
 import servicePest from "@/assets/service-pest.jpg";
 import svcGardenDesign from "@/assets/svc-garden-design.jpg";
+import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine, CalendarCheck, Shovel } from "lucide-react";
+import svcSoil from "@/assets/svc-soil.jpg";
+import svcWeeklyVisits from "@/assets/svc-weekly-visits.jpg";
+import svcRepotting from "@/assets/svc-repotting.jpg";
+import svcPruning from "@/assets/svc-pruning.jpg";
+import svcNutrients from "@/assets/svc-nutrients.jpg";
+import svcSetup from "@/assets/svc-setup.jpg";
+import svcKitchen from "@/assets/svc-kitchen.jpg";
+import svcVertical from "@/assets/svc-vertical.jpg";
+import servicePest from "@/assets/service-pest.jpg";
+import svcGardenDesign from "@/assets/svc-garden-design.jpg";
 import svcConsultation from "@/assets/svc-consultation.jpg";
+import svcSoilOps from "@/assets/svc-soil-operations.png";
 
 const coreServices = [
   { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions.", icon: Droplets },
@@ -20,6 +32,7 @@ const coreServices = [
   { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus.", icon: Bug },
   { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery.", icon: TreePine },
   { img: svcWeeklyVisits, title: "Regular Weekly Visits", desc: "Scheduled weekly expert visits to keep your plants healthy and thriving all year round.", icon: CalendarCheck },
+  { img: svcSoilOps, title: "Soil Operations", desc: "Professional soil preparation, replacement, and enrichment for optimal plant growth.", icon: Shovel },
 ];
 
 type AddOnService = {
