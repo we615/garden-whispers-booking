@@ -22,11 +22,23 @@ const coreServices = [
   { img: svcWeeklyVisits, title: "Regular Weekly Visits", desc: "Scheduled weekly expert visits to keep your plants healthy and thriving all year round.", icon: CalendarCheck },
 ];
 
-const addOnServices = [
+type AddOnService = {
+  img: string;
+  title: string;
+  desc: string;
+  featured?: boolean;
+};
+
+const addOnServices: AddOnService[] = [
   { img: svcKitchen, title: "Home Kitchen Vegetable Garden", desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your balcony." },
   { img: svcVertical, title: "Vertical Garden — Installation & Care", desc: "Transform walls into living green spaces with professional vertical setups." },
   { img: svcGardenDesign, title: "Design Your Garden", desc: "Custom garden layouts crafted to match your space, style, and vision." },
-  { img: svcConsultation, title: "EcoBloom DIY Care Kit with Expert Plants Consultation Visit", desc: "Get expert plant care at home with EcoBloom. We guide you or your gardener through our consultation and EcoBloom Care Kit — providing the right products, fertilizers, pest control, and a clear schedule to ensure healthy, thriving plants." },
+  {
+    img: svcConsultation,
+    title: "EcoBloom DIY Care Kit with Expert Plants Consultation Visit",
+    desc: "Get expert plant care at home with EcoBloom. We guide you or your gardener through our consultation and EcoBloom Care Kit — providing the right products, fertilizers, pest control, and a clear schedule to ensure healthy, thriving plants.",
+    featured: true,
+  },
 ];
 
 const ServicesSection = () => {
@@ -90,34 +102,93 @@ const ServicesSection = () => {
   );
 };
 
-const AddOnCard = ({ service: s }: { service: { img: string; title: string; desc: string } }) => {
+const AddOnCard = ({ service: s }: { service: AddOnService }) => {
   const [expanded, setExpanded] = useState(false);
-  const isLong = s.desc.length > 60;
-  const displayDesc = isLong && !expanded ? s.desc.slice(0, 60) + "..." : s.desc;
+  const isLong = s.desc.length > 72;
+
+  if (s.featured) {
+    return (
+      <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500">
+        <div className="aspect-[3/4] sm:aspect-[2/3] overflow-hidden bg-muted">
+          <img
+            src={s.img}
+            alt={s.title}
+            className="h-full w-full object-contain object-center"
+          />
+        </div>
+        <div className="p-5 sm:p-6">
+          <h3 className="font-display text-base sm:text-lg font-bold text-foreground uppercase tracking-wide mb-2">{s.title}</h3>
+          {expanded ? (
+            <div className="space-y-2">
+              <p className="text-sm text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
+              {isLong && (
+                <button
+                  type="button"
+                  onClick={() => setExpanded(false)}
+                  className="text-sm font-semibold text-accent underline underline-offset-2"
+                >
+                  Read less
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <p className="min-w-0 flex-1 truncate text-sm text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
+              {isLong && (
+                <button
+                  type="button"
+                  onClick={() => setExpanded(true)}
+                  className="shrink-0 text-sm font-semibold text-accent underline underline-offset-2"
+                >
+                  Read more
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="group relative rounded-2xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500">
-      <div className="aspect-[4/3] overflow-hidden">
+      <div className="aspect-[16/10] overflow-hidden">
         <img
           src={s.img}
           alt={s.title}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-6">
         <h3 className="font-display text-lg font-bold text-white uppercase tracking-wide mb-2">{s.title}</h3>
-        <p className="text-sm text-white/85 leading-relaxed font-medium">
-          {displayDesc}
-          {isLong && (
-            <button
-              onClick={() => setExpanded(!expanded)}
-              className="ml-1 text-accent underline underline-offset-2 font-semibold"
-            >
-              {expanded ? "Read less" : "Read more"}
-            </button>
-          )}
-        </p>
+        {expanded ? (
+          <div className="space-y-2">
+            <p className="text-sm text-white/85 leading-relaxed font-medium">{s.desc}</p>
+            {isLong && (
+              <button
+                type="button"
+                onClick={() => setExpanded(false)}
+                className="text-sm font-semibold text-accent underline underline-offset-2"
+              >
+                Read less
+              </button>
+            )}
+          </div>
+        ) : (
+          <div className="flex items-center gap-2">
+            <p className="min-w-0 flex-1 truncate text-sm text-white/85 leading-relaxed font-medium">{s.desc}</p>
+            {isLong && (
+              <button
+                type="button"
+                onClick={() => setExpanded(true)}
+                className="shrink-0 text-sm font-semibold text-accent underline underline-offset-2"
+              >
+                Read more
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
