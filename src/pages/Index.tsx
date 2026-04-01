@@ -13,6 +13,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ClientsSection from "@/components/ClientsSection";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
