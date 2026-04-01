@@ -20,6 +20,27 @@ const testimonials = [
     text: "Smart team, very passionate for what they do. Had a great knowledge. Quick response and professional. Highly recommended!",
     color: "bg-brand-blue",
   },
+  {
+    name: "Rahul",
+    location: "Pune",
+    rating: 5,
+    text: "EcoBloom saved my plants — they look fresh and healthy now!",
+    color: "bg-primary",
+  },
+  {
+    name: "Sneha",
+    location: "Wakad",
+    rating: 5,
+    text: "Very professional service, highly recommended.",
+    color: "bg-brand-red",
+  },
+  {
+    name: "Priya Sharma",
+    location: "Kothrud",
+    rating: 5,
+    text: "Excellent plant care service! My terrace garden has never looked better. The team is knowledgeable and reliable.",
+    color: "bg-brand-blue",
+  },
 ];
 
 const TestimonialsSection = () => {
@@ -45,7 +66,8 @@ const TestimonialsSection = () => {
                     {Array.from({ length: t.rating }).map((_, i) => (
                       <span key={i} className="text-accent text-sm">★</span>
                     ))}
-                    <span className="text-xs text-muted-foreground ml-1">{t.time}</span>
+                    {"time" in t && <span className="text-xs text-muted-foreground ml-1">{t.time}</span>}
+                    {"location" in t && <span className="text-xs text-muted-foreground ml-1">— {t.location}</span>}
                   </div>
                 </div>
               </div>

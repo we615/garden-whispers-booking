@@ -6,12 +6,14 @@ import IntroSection from "@/components/IntroSection";
 import ServicesSection from "@/components/ServicesSection";
 import HowItWorks from "@/components/HowItWorks";
 import PricingSection from "@/components/PricingSection";
+import CtaBanner from "@/components/CtaBanner";
 import WhyUsSection from "@/components/WhyUsSection";
 import VideoGallery from "@/components/VideoGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ClientsSection from "@/components/ClientsSection";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -36,11 +38,13 @@ const Index = () => {
       <ServicesSection />
       <HowItWorks />
       <PricingSection />
+      <CtaBanner />
       <WhyUsSection />
       <VideoGallery />
       <TestimonialsSection />
       <ClientsSection />
       <BookingForm />
+      <FloatingWhatsApp />
       <Footer />
     </div>
   );
