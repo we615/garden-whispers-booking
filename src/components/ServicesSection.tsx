@@ -106,38 +106,6 @@ const AddOnCard = ({ service: s }: { service: AddOnService }) => {
   const [expanded, setExpanded] = useState(false);
   const isLong = s.desc.length > 72;
 
-  if (s.featured) {
-    return (
-      <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500 flex flex-col">
-        <div className="aspect-[16/10] overflow-hidden bg-muted">
-          <img
-            src={s.img}
-            alt={s.title}
-            className="h-full w-full object-contain object-center"
-          />
-        </div>
-        <div className="p-5 sm:p-6 flex-1 flex flex-col">
-          <h3 className="font-display text-base sm:text-lg font-bold text-foreground uppercase tracking-wide mb-2">{s.title}</h3>
-          {expanded ? (
-            <div className="space-y-2">
-              <p className="text-sm text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
-              {isLong && (
-                <button type="button" onClick={() => setExpanded(false)} className="text-sm font-semibold text-accent underline underline-offset-2">Read less</button>
-              )}
-            </div>
-          ) : (
-            <div className="flex items-center gap-2">
-              <p className="min-w-0 flex-1 truncate text-sm text-muted-foreground leading-relaxed font-medium">{s.desc}</p>
-              {isLong && (
-                <button type="button" onClick={() => setExpanded(true)} className="shrink-0 text-sm font-semibold text-accent underline underline-offset-2">Read more</button>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="group relative rounded-2xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500">
       <div className="aspect-[16/10] overflow-hidden">
@@ -154,26 +122,14 @@ const AddOnCard = ({ service: s }: { service: AddOnService }) => {
           <div className="space-y-2">
             <p className="text-sm text-white/85 leading-relaxed font-medium">{s.desc}</p>
             {isLong && (
-              <button
-                type="button"
-                onClick={() => setExpanded(false)}
-                className="text-sm font-semibold text-accent underline underline-offset-2"
-              >
-                Read less
-              </button>
+              <button type="button" onClick={() => setExpanded(false)} className="text-sm font-semibold text-accent underline underline-offset-2">Read less</button>
             )}
           </div>
         ) : (
           <div className="flex items-center gap-2">
             <p className="min-w-0 flex-1 truncate text-sm text-white/85 leading-relaxed font-medium">{s.desc}</p>
             {isLong && (
-              <button
-                type="button"
-                onClick={() => setExpanded(true)}
-                className="shrink-0 text-sm font-semibold text-accent underline underline-offset-2"
-              >
-                Read more
-              </button>
+              <button type="button" onClick={() => setExpanded(true)} className="shrink-0 text-sm font-semibold text-accent underline underline-offset-2">Read more</button>
             )}
           </div>
         )}
