@@ -19,7 +19,6 @@ const coreServices = [
   { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus.", icon: Bug },
   { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery.", icon: TreePine },
   { img: svcWeeklyVisits, title: "Regular Weekly Visits", desc: "Scheduled weekly expert visits to keep your plants healthy and thriving all year round.", icon: CalendarCheck },
-  { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery.", icon: TreePine },
 ];
 
 const addOnServices = [
