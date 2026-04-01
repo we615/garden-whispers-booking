@@ -85,9 +85,41 @@ const ServicesSection = () => {
             <AddOnCard key={s.title} service={s} />
           ))}
         </div>
-        </div>
       </div>
     </section>
+  );
+};
+
+const AddOnCard = ({ service: s }: { service: { img: string; title: string; desc: string } }) => {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = s.desc.length > 120;
+  const displayDesc = isLong && !expanded ? s.desc.slice(0, 120) + "..." : s.desc;
+
+  return (
+    <div className="group relative rounded-2xl overflow-hidden shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] transition-all duration-500">
+      <div className="aspect-[4/3] overflow-hidden">
+        <img
+          src={s.img}
+          alt={s.title}
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-6">
+        <h3 className="font-display text-lg font-bold text-white uppercase tracking-wide mb-2">{s.title}</h3>
+        <p className="text-sm text-white/85 leading-relaxed font-medium">
+          {displayDesc}
+          {isLong && (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="ml-1 text-accent underline underline-offset-2 font-semibold"
+            >
+              {expanded ? "Read less" : "Read more"}
+            </button>
+          )}
+        </p>
+      </div>
+    </div>
   );
 };
 
