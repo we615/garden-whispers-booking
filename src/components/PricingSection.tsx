@@ -20,7 +20,7 @@ const monthlyRates: Record<number, { threeMonth: number; sixMonth: number; yearl
   40:  { threeMonth: 4160, sixMonth: 4000, yearly: 3360 },
   50:  { threeMonth: 5200, sixMonth: 4600, yearly: 4200 },
   75:  { threeMonth: 7500, sixMonth: 6900, yearly: 6000 },
-  100: { threeMonth: 10400, sixMonth: 9200, yearly: 8000 },
+  100: { threeMonth: 10000, sixMonth: 9200, yearly: 8000 },
 };
 
 const formatPrice = (n: number) => "₹" + n.toLocaleString("en-IN");

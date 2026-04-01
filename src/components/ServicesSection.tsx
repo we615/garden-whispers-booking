@@ -52,7 +52,7 @@ const ServicesSection = () => {
                 <img
                   src={s.img}
                   alt={s.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${(s as any).contain ? "object-contain bg-muted" : "object-cover"}`}
                 />
               </div>
               <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary/90 flex items-center justify-center shadow-lg">
