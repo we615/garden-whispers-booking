@@ -7,9 +7,9 @@ import ServicesSection from "@/components/ServicesSection";
 import HowItWorks from "@/components/HowItWorks";
 import PricingSection from "@/components/PricingSection";
 import WhyUsSection from "@/components/WhyUsSection";
-import TransformationSection from "@/components/TransformationSection";
 import VideoGallery from "@/components/VideoGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ClientsSection from "@/components/ClientsSection";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
 
@@ -37,9 +37,9 @@ const Index = () => {
       <HowItWorks />
       <PricingSection />
       <WhyUsSection />
-      <TransformationSection />
       <VideoGallery />
       <TestimonialsSection />
+      <ClientsSection />
       <BookingForm />
       <Footer />
     </div>

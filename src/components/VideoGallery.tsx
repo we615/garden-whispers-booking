@@ -1,35 +1,46 @@
 import { Play } from "lucide-react";
 import { useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
-const generalVideos = [
+type Category = "home" | "corporate";
+
+const videos: { src: string; title: string; desc: string; category: Category }[] = [
   {
     src: "/videos/ecobloom-work-3.mp4",
     title: "Indoor Plant Styling",
     desc: "Watch how we transform indoor spaces with expert green décor.",
+    category: "home",
   },
   {
     src: "/videos/ecobloom-work-6.mp4",
-    title: "Plant Care in Action",
-    desc: "Our team ensuring every plant gets the attention it deserves.",
+    title: "Garden Care Routine",
+    desc: "Our hands-on approach to keeping every garden thriving.",
+    category: "home",
   },
-];
-
-const corporateVideos = [
   {
     src: "/videos/corporate-1.mp4",
     title: "Office Green Setup",
     desc: "Transforming corporate spaces with lush indoor greenery.",
+    category: "corporate",
   },
   {
     src: "/videos/corporate-2.mp4",
     title: "Workspace Plant Care",
     desc: "Professional plant maintenance for modern workspaces.",
+    category: "corporate",
   },
   {
     src: "/videos/corporate-3.mp4",
     title: "Corporate Landscaping",
     desc: "Complete green makeovers for office environments.",
+    category: "corporate",
   },
+];
+
+const tabs: { label: string; value: "all" | Category }[] = [
+  { label: "All", value: "all" },
+  { label: "Home", value: "home" },
+  { label: "Corporate", value: "corporate" },
 ];
 
 const VideoCard = ({ src, title, desc }: { src: string; title: string; desc: string }) => {
@@ -38,11 +49,8 @@ const VideoCard = ({ src, title, desc }: { src: string; title: string; desc: str
 
   const toggle = () => {
     if (!ref.current) return;
-    if (playing) {
-      ref.current.pause();
-    } else {
-      ref.current.play();
-    }
+    if (playing) ref.current.pause();
+    else ref.current.play();
     setPlaying(!playing);
   };
 
@@ -77,32 +85,38 @@ const VideoCard = ({ src, title, desc }: { src: string; title: string; desc: str
 };
 
 const VideoGallery = () => {
+  const [active, setActive] = useState<"all" | Category>("all");
+  const filtered = active === "all" ? videos : videos.filter((v) => v.category === active);
+
   return (
     <section className="py-24 px-4 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <p className="text-sm font-semibold tracking-widest uppercase text-brand-blue mb-2">See Us In Action</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground uppercase tracking-[0.15em]">
             Our Work — Live
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 max-w-3xl mx-auto">
-          {generalVideos.map((v) => (
-            <VideoCard key={v.src} {...v} />
+        <div className="flex items-center justify-center gap-3 mb-10">
+          {tabs.map((tab) => (
+            <button
+              key={tab.value}
+              onClick={() => setActive(tab.value)}
+              className={cn(
+                "px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300",
+                active === tab.value
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              )}
+            >
+              {tab.label}
+            </button>
           ))}
         </div>
 
-        {/* Corporate Offices */}
-        <div className="text-center mt-16 mb-10">
-          <p className="text-sm font-semibold tracking-widest uppercase text-brand-red mb-2">Corporate Offices</p>
-          <h3 className="font-display text-2xl sm:text-3xl font-bold text-foreground uppercase tracking-[0.12em]">
-            Green Workspaces
-          </h3>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-4xl mx-auto">
-          {corporateVideos.map((v) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-5xl mx-auto">
+          {filtered.map((v) => (
             <VideoCard key={v.src} {...v} />
           ))}
         </div>
