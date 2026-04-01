@@ -25,7 +25,7 @@ const addOnServices = [
   { img: svcKitchen, title: "Home Kitchen Vegetable Garden", desc: "Setup & care — eat what you grow. Fresh herbs and veggies from your balcony." },
   { img: svcVertical, title: "Vertical Garden — Installation & Care", desc: "Transform walls into living green spaces with professional vertical setups." },
   { img: svcGardenDesign, title: "Design Your Garden", desc: "Custom garden layouts crafted to match your space, style, and vision." },
-  { img: svcConsultation, title: "EcoBloom DIY Care Kit with Expert Plants Consultation Visit", desc: "Get expert plant care at home with EcoBloom. We guide you or your gardener through our consultation and EcoBloom Care Kit — providing the right products, fertilizers, pest control, and a clear schedule to ensure healthy, thriving plants. No guesswork — just a complete system for better growth, long-term plant health, and beautiful gardens. With 1–2 monthly visits, we ensure proper care, monitor plant health, and plan future needs for your garden." },
+  { img: svcConsultation, title: "EcoBloom DIY Care Kit with Expert Plants Consultation Visit", desc: "Get expert plant care at home with EcoBloom. We guide you or your gardener through our consultation and EcoBloom Care Kit — providing the right products, fertilizers, pest control, and a clear schedule to ensure healthy, thriving plants." },
 ];
 
 const ServicesSection = () => {
