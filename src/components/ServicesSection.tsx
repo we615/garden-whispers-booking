@@ -1,15 +1,4 @@
 import { useState } from "react";
-import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine, CalendarCheck } from "lucide-react";
-import svcSoil from "@/assets/svc-soil.jpg";
-import svcWeeklyVisits from "@/assets/svc-weekly-visits.jpg";
-import svcRepotting from "@/assets/svc-repotting.jpg";
-import svcPruning from "@/assets/svc-pruning.jpg";
-import svcNutrients from "@/assets/svc-nutrients.jpg";
-import svcSetup from "@/assets/svc-setup.jpg";
-import svcKitchen from "@/assets/svc-kitchen.jpg";
-import svcVertical from "@/assets/svc-vertical.jpg";
-import servicePest from "@/assets/service-pest.jpg";
-import svcGardenDesign from "@/assets/svc-garden-design.jpg";
 import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine, CalendarCheck, Shovel } from "lucide-react";
 import svcSoil from "@/assets/svc-soil.jpg";
 import svcWeeklyVisits from "@/assets/svc-weekly-visits.jpg";
