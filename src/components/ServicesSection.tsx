@@ -1,5 +1,6 @@
-import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine } from "lucide-react";
+import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine, CalendarCheck } from "lucide-react";
 import svcSoil from "@/assets/svc-soil.jpg";
+import svcWeeklyVisits from "@/assets/svc-weekly-visits.jpg";
 import svcRepotting from "@/assets/svc-repotting.jpg";
 import svcPruning from "@/assets/svc-pruning.jpg";
 import svcNutrients from "@/assets/svc-nutrients.jpg";
@@ -17,6 +18,7 @@ const coreServices = [
   { img: svcNutrients, title: "Nutrient Management", desc: "Natural nutrition for stronger, greener plants at every growth stage.", icon: Leaf, contain: true },
   { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus.", icon: Bug },
   { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery.", icon: TreePine },
+  { img: svcWeeklyVisits, title: "Regular Weekly Visits", desc: "Scheduled weekly expert visits to keep your plants healthy and thriving all year round.", icon: CalendarCheck },
 ];
 
 const addOnServices = [
