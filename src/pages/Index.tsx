@@ -37,11 +37,13 @@ const Index = () => {
       <ServicesSection />
       <HowItWorks />
       <PricingSection />
+      <CtaBanner />
       <WhyUsSection />
       <VideoGallery />
       <TestimonialsSection />
       <ClientsSection />
       <BookingForm />
+      <FloatingWhatsApp />
       <Footer />
     </div>
   );
