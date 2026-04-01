@@ -4,14 +4,12 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const serviceOptions = [
-  { value: "monthly-maintenance", label: "🌿 Monthly Plant Maintenance" },
-  { value: "soil-checkup", label: "🧪 Soil & Plant Health Checkup" },
-  { value: "repotting", label: "🪴 Repotting & Transplanting" },
-  { value: "pest-control", label: "🐛 Pest Control" },
-  { value: "nutrients", label: "🧬 Nutrient Management" },
-  { value: "pruning", label: "✂️ Pruning & Shaping" },
-  { value: "kitchen-garden", label: "🥬 Kitchen Garden Setup" },
-  { value: "vertical-garden", label: "🌱 Vertical Garden Installation" },
+  { value: "monthly-care", label: "🌿 Monthly Plant Care & Maintenance" },
+  { value: "design-garden", label: "🎨 Design Your Garden" },
+  { value: "consultation", label: "🪴 Plants Consultation" },
+  { value: "visit-garden", label: "🏡 Visit My Garden Plants" },
+  { value: "vertical-garden", label: "🌱 Vertical Garden Installation & Care" },
+  { value: "kitchen-garden", label: "🥬 Kitchen Garden & Grow Vegetables" },
 ];
 
 const timeSlots = [
