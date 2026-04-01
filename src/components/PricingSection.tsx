@@ -4,23 +4,23 @@ import { cn } from "@/lib/utils";
 const plantOptions = [10, 20, 30, 40, 50, 75, 100];
 
 const pricingData: Record<number, { monthly: number; threeMonth: number; sixMonth: number; yearly: number }> = {
-  10:  { monthly: 1200,  threeMonth: 3240,  sixMonth: 6480,  yearly: 11040 },
+  10:  { monthly: 1200,  threeMonth: 3240,  sixMonth: 6000,  yearly: 11040 },
   20:  { monthly: 2400,  threeMonth: 6480,  sixMonth: 12000, yearly: 21120 },
   30:  { monthly: 3600,  threeMonth: 9720,  sixMonth: 18000, yearly: 31680 },
   40:  { monthly: 4800,  threeMonth: 12480, sixMonth: 24000, yearly: 40320 },
   50:  { monthly: 6000,  threeMonth: 15600, sixMonth: 27600, yearly: 50400 },
-  75:  { monthly: 7800,  threeMonth: 23400, sixMonth: 41400, yearly: 72000 },
-  100: { monthly: 10400, threeMonth: 31200, sixMonth: 55200, yearly: 96000 },
+  75:  { monthly: 7800,  threeMonth: 22500, sixMonth: 41400, yearly: 72000 },
+  100: { monthly: 10400, threeMonth: 30000, sixMonth: 55200, yearly: 96000 },
 };
 
 const monthlyRates: Record<number, { threeMonth: number; sixMonth: number; yearly: number }> = {
-  10:  { threeMonth: 1080, sixMonth: 1080, yearly: 920 },
+  10:  { threeMonth: 1080, sixMonth: 1000, yearly: 920 },
   20:  { threeMonth: 2160, sixMonth: 2000, yearly: 1760 },
   30:  { threeMonth: 3240, sixMonth: 3000, yearly: 2640 },
   40:  { threeMonth: 4160, sixMonth: 4000, yearly: 3360 },
   50:  { threeMonth: 5200, sixMonth: 4600, yearly: 4200 },
-  75:  { threeMonth: 7800, sixMonth: 6900, yearly: 6000 },
-  100: { threeMonth: 10400, sixMonth: 9200, yearly: 8000 },
+  75:  { threeMonth: 7500, sixMonth: 6900, yearly: 6000 },
+  100: { threeMonth: 10000, sixMonth: 9200, yearly: 8000 },
 };
 
 const formatPrice = (n: number) => "₹" + n.toLocaleString("en-IN");

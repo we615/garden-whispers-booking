@@ -14,7 +14,7 @@ const coreServices = [
   { img: svcSoil, title: "Soil, Water & Sunlight Checkup", desc: "Complete plant health assessment to ensure ideal growing conditions.", icon: Droplets },
   { img: svcRepotting, title: "Repotting & Transplanting", desc: "Safe shifting of plants into new pots with proper root protection.", icon: Sprout },
   { img: svcPruning, title: "Professional Cutting & Shaping", desc: "Expert trimming and styling to keep your plants lush and beautiful.", icon: Scissors },
-  { img: svcNutrients, title: "Nutrient Management", desc: "Natural nutrition for stronger, greener plants at every growth stage.", icon: Leaf },
+  { img: svcNutrients, title: "Nutrient Management", desc: "Natural nutrition for stronger, greener plants at every growth stage.", icon: Leaf, contain: true },
   { img: servicePest, title: "Pest & Disease Control", desc: "Eco-friendly treatment to protect plants from insects, diseases, and fungus.", icon: Bug },
   { img: svcSetup, title: "Plants Setup & Green Décor", desc: "We arrange your plants and enhance your space with beautiful greenery.", icon: TreePine },
 ];
@@ -52,7 +52,7 @@ const ServicesSection = () => {
                 <img
                   src={s.img}
                   alt={s.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${(s as any).contain ? "object-contain bg-muted" : "object-cover"}`}
                 />
               </div>
               <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary/90 flex items-center justify-center shadow-lg">
