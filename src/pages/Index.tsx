@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
+import MissionSection from "@/components/MissionSection";
 import ServicesSection from "@/components/ServicesSection";
 import HowItWorks from "@/components/HowItWorks";
 import PricingSection from "@/components/PricingSection";
@@ -12,6 +13,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ClientsSection from "@/components/ClientsSection";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -19,11 +21,9 @@ const Index = () => {
   useEffect(() => {
     const scrollTo = searchParams.get("scrollTo");
     if (scrollTo) {
-      // Small delay to ensure DOM is ready
       requestAnimationFrame(() => {
         document.getElementById(scrollTo)?.scrollIntoView({ behavior: "smooth" });
       });
-      // Clean up the URL
       setSearchParams({}, { replace: true });
     }
   }, [searchParams, setSearchParams]);
@@ -33,6 +33,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <IntroSection />
+      <MissionSection />
       <ServicesSection />
       <HowItWorks />
       <PricingSection />
@@ -42,6 +43,7 @@ const Index = () => {
       <ClientsSection />
       <BookingForm />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
