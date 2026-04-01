@@ -1,5 +1,6 @@
-import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine } from "lucide-react";
+import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine, CalendarCheck } from "lucide-react";
 import svcSoil from "@/assets/svc-soil.jpg";
+import svcWeeklyVisits from "@/assets/svc-weekly-visits.jpg";
 import svcRepotting from "@/assets/svc-repotting.jpg";
 import svcPruning from "@/assets/svc-pruning.jpg";
 import svcNutrients from "@/assets/svc-nutrients.jpg";
