@@ -20,20 +20,6 @@ const testimonials = [
     text: "Smart team, very passionate for what they do. Had a great knowledge. Quick response and professional. Highly recommended!",
     color: "bg-brand-blue",
   },
-  {
-    name: "Rahul",
-    time: "Pune",
-    rating: 5,
-    text: "EcoBloom saved my plants — they look fresh and healthy now!",
-    color: "bg-accent",
-  },
-  {
-    name: "Sneha",
-    time: "Wakad",
-    rating: 5,
-    text: "Very professional service, highly recommended.",
-    color: "bg-primary",
-  },
 ];
 
 const TestimonialsSection = () => {

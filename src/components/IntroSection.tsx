@@ -9,17 +9,9 @@ const IntroSection = () => {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
               Pune's Trusted Plant Care Experts
             </h2>
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-              <p>
-                At EcoBloom, we transform struggling plants into healthy, thriving greens right at your home.
-              </p>
-              <p>
-                We use scientific diagnosis and expert care to fix plant issues at the root — ensuring faster growth, better health, and long-lasting results.
-              </p>
-              <p>
-                Founded by Agriculture graduates, we bring trusted plant care services across <strong className="text-foreground">PUNE</strong> and <strong className="text-foreground">PCMC</strong> — from balconies to complete garden spaces.
-              </p>
-            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              EcoBloom Plant Care Services is founded by two Agriculture graduates who believe every urban space deserves a touch of nature. We bring scientific expertise and genuine passion to transform gardens across Pune — from apartment balconies to sprawling society grounds.
+            </p>
           </div>
           <div className="bg-card border border-border rounded-2xl p-4 shadow-sm">
             <img
