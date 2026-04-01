@@ -6,6 +6,7 @@ import IntroSection from "@/components/IntroSection";
 import ServicesSection from "@/components/ServicesSection";
 import HowItWorks from "@/components/HowItWorks";
 import PricingSection from "@/components/PricingSection";
+import CtaBanner from "@/components/CtaBanner";
 import WhyUsSection from "@/components/WhyUsSection";
 import VideoGallery from "@/components/VideoGallery";
 import TestimonialsSection from "@/components/TestimonialsSection";
