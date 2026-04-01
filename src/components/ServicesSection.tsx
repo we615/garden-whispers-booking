@@ -50,7 +50,7 @@ const ServicesSection = () => {
               key={s.title}
               className="group relative rounded-2xl overflow-hidden bg-card border border-border shadow-[0_4px_24px_-6px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_40px_-8px_hsl(var(--foreground)/0.18)] hover:-translate-y-1.5 transition-all duration-500"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.title}
