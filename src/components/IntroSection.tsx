@@ -10,7 +10,11 @@ const IntroSection = () => {
               Pune's Trusted Plant Care Experts
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              EcoBloom Plant Care Services is founded by two Agriculture graduates who believe every urban space deserves a touch of nature. We bring scientific expertise and genuine passion to transform gardens across Pune — from apartment balconies to sprawling society grounds.
+              At EcoBloom, we transform struggling plants into healthy, thriving greens right at your home.
+              <br /><br />
+              We use scientific diagnosis and expert care to fix plant issues at the root — ensuring faster growth, better health, and long-lasting results.
+              <br /><br />
+              Founded by Agriculture graduates, we bring trusted plant care services across <span className="font-semibold">PUNE</span> and <span className="font-semibold">PCMC</span> — from balconies to complete garden spaces.
             </p>
           </div>
           <div className="bg-card border border-border rounded-2xl p-4 shadow-sm">
