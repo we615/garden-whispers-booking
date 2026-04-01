@@ -1,27 +1,25 @@
 
 
-## Plan: Fix Client Logos, Update Pricing, Replace Service Images
+## Plan: Update Hero Subtext, Consultation Card, and Add Client Logo
 
-### 1. Fix Our Clients section alignment
-- In `ClientsSection.tsx`, ensure all logos are aligned in a straight horizontal line using `items-center` and consistent container sizing
-- Add `aspect-square` or fixed dimensions to ensure uniform logo boxes
+### 1. Fix hero subtext (HeroSection.tsx)
+The subtext on line 60 appears to already have the correct text, but based on user feedback it hasn't changed in the preview. Will re-apply the exact text without em dashes to match user's request:
+> "Professional plant care and garden maintenance services across Pune and PCMC driven by expertise, backed by passion.We combine scientific plant care with thoughtful design to revive, protect, and elevate your green spaces all under one roof.Create a space that feels alive, thriving, and beautifully green."
 
-### 2. Replace service images (3 changes)
-- Copy `image-64.png` (balcony garden) → `src/assets/svc-garden-design.jpg` (overwrite) — used by "Design Your Garden" add-on
-- Copy `image-68.png` (kitchen vegetable garden) → `src/assets/svc-kitchen.jpg` (overwrite) — used by "Home Kitchen Vegetable Garden" add-on
-- Copy `image-69.png` (team member watering plant) → `src/assets/svc-nutrients.jpg` (overwrite) — used by "Nutrient Management" core service
-- For Nutrient Management, adjust the image CSS to use `object-contain` or proper positioning so the full image is visible without cropping
+### 2. Update "Plants Consultation" add-on card (ServicesSection.tsx)
+- Change title from "Plants Consultation" to "EcoBloom DIY Care Kit with Expert Plants Consultation Visit"
+- Replace description with the new multi-paragraph content about EcoBloom Care Kit
+- Replace image: copy `image-87.png` (DIY Care Kit photo) to `src/assets/svc-consultation.jpg` and update the import
+- Since the description is long, may need to adjust the card's text area or aspect ratio
 
-### 3. Fix pricing data (3 changes in `PricingSection.tsx`)
-- **10 plants, 6-month**: change sixMonth total from 6480 → 6000, monthly rate from 1080 → 1000
-- **75 plants, 3-month**: change threeMonth total from 23400 → 22500, monthly rate from 7800 → 7500
-- **100 plants, 3-month**: change threeMonth total from 31200 → 30000, monthly rate from 10400 → 10000
+### 3. Add new client logo (ClientsSection.tsx)
+- Copy `image-88.png` (Kalpataru Regency I) to `src/assets/clients/kalpataru.png`
+- Add to clients array and ensure alignment remains consistent
 
 ### Files Modified
-- `src/components/ClientsSection.tsx` — fix logo alignment
-- `src/components/PricingSection.tsx` — update 3 pricing values
-- `src/components/ServicesSection.tsx` — adjust Nutrient Management image to prevent cropping
-- `src/assets/svc-garden-design.jpg` — overwrite with balcony garden
-- `src/assets/svc-kitchen.jpg` — overwrite with kitchen vegetable garden
-- `src/assets/svc-nutrients.jpg` — overwrite with team member watering
+- `src/components/HeroSection.tsx` -- fix subtext
+- `src/components/ServicesSection.tsx` -- update consultation card title, desc, image
+- `src/components/ClientsSection.tsx` -- add Kalpataru Regency I logo
+- `src/assets/svc-consultation.jpg` -- new image (DIY kit photo)
+- `src/assets/clients/kalpataru.png` -- new client logo
 
