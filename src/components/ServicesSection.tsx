@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Droplets, Sprout, Scissors, Leaf, Bug, TreePine, CalendarCheck } from "lucide-react";
 import svcSoil from "@/assets/svc-soil.jpg";
 import svcWeeklyVisits from "@/assets/svc-weekly-visits.jpg";
