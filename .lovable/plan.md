@@ -1,27 +1,52 @@
 
 
-## Plan: Fix Client Logos, Update Pricing, Replace Service Images
+## Plan: Testimonials, Floating Button, Content Updates, New Service Images
 
-### 1. Fix Our Clients section alignment
-- In `ClientsSection.tsx`, ensure all logos are aligned in a straight horizontal line using `items-center` and consistent container sizing
-- Add `aspect-square` or fixed dimensions to ensure uniform logo boxes
+### 1. Add more testimonials
+Add two new entries to `TestimonialsSection.tsx`:
+- "EcoBloom saved my plants — they look fresh and healthy now!" — Rahul, Pune
+- "Very professional service, highly recommended." — Sneha, Wakad
+Update grid to handle 5 cards (keep `md:grid-cols-3`, cards will wrap naturally).
 
-### 2. Replace service images (3 changes)
-- Copy `image-64.png` (balcony garden) → `src/assets/svc-garden-design.jpg` (overwrite) — used by "Design Your Garden" add-on
-- Copy `image-68.png` (kitchen vegetable garden) → `src/assets/svc-kitchen.jpg` (overwrite) — used by "Home Kitchen Vegetable Garden" add-on
-- Copy `image-69.png` (team member watering plant) → `src/assets/svc-nutrients.jpg` (overwrite) — used by "Nutrient Management" core service
-- For Nutrient Management, adjust the image CSS to use `object-contain` or proper positioning so the full image is visible without cropping
+### 2. Floating WhatsApp button
+Create `src/components/FloatingWhatsApp.tsx` — a fixed bottom-right button:
+- Text: "Get FREE Plant Diagnosis 🌿"
+- Subtitle: "Send your plant photo on WhatsApp and get expert advice instantly."
+- Links to `https://wa.me/919270993102`
+- Add to `Index.tsx`
 
-### 3. Fix pricing data (3 changes in `PricingSection.tsx`)
-- **10 plants, 6-month**: change sixMonth total from 6480 → 6000, monthly rate from 1080 → 1000
-- **75 plants, 3-month**: change threeMonth total from 23400 → 22500, monthly rate from 7800 → 7500
-- **100 plants, 3-month**: change threeMonth total from 31200 → 30000, monthly rate from 10400 → 10000
+### 3. Change hero CTA text
+In `HeroSection.tsx`, change "Book Free Visit" → "Book free plants inspection visit"
+
+### 4. Update IntroSection text
+Replace the paragraph in `IntroSection.tsx` with the new 3-paragraph copy about scientific diagnosis, Agriculture graduates, Pune and PCMC.
+
+### 5. Update hero subtitle (image-81 reference)
+Change hero `<p>` to: "Professional plant care and garden maintenance services across Pune and PCMC driven by expertise, backed by passion."
+
+### 6. New service images (3 replacements + 1 new)
+- Copy `image-78.png` → `src/assets/svc-setup.jpg` (Plants Setup & Green Décor)
+- Copy `image-79.png` → new `src/assets/svc-soil-ops.jpg` (new "Soil Operations" core service)
+- Copy `image-80.png` → `src/assets/svc-pruning.jpg` (Professional Cutting & Shaping)
+- Add "Soil Operations" entry to `coreServices` array with Shovel icon
+
+### 7. Add MissionSection-style content block (image-81 reference)
+Create a new section or update an existing one with the content from image-81:
+- "Professional plant care and garden maintenance services across Pune and PCMC..."
+- "We combine scientific plant care with thoughtful design..."
+- "Create a space that feels alive, thriving, and beautifully green."
+- CTA: "Book Your Expert Visit Today" linking to #booking
+- Add after IntroSection in Index.tsx (or integrate into MissionSection if it exists)
 
 ### Files Modified
-- `src/components/ClientsSection.tsx` — fix logo alignment
-- `src/components/PricingSection.tsx` — update 3 pricing values
-- `src/components/ServicesSection.tsx` — adjust Nutrient Management image to prevent cropping
-- `src/assets/svc-garden-design.jpg` — overwrite with balcony garden
-- `src/assets/svc-kitchen.jpg` — overwrite with kitchen vegetable garden
-- `src/assets/svc-nutrients.jpg` — overwrite with team member watering
+- `src/components/TestimonialsSection.tsx` — add 2 testimonials
+- `src/components/FloatingWhatsApp.tsx` — new floating button
+- `src/components/HeroSection.tsx` — update CTA text + subtitle
+- `src/components/IntroSection.tsx` — update paragraph text
+- `src/components/ServicesSection.tsx` — add Soil Operations service
+- `src/components/MissionSection.tsx` — update with new content block + CTA
+- `src/pages/Index.tsx` — add FloatingWhatsApp, add MissionSection
+- `src/assets/svc-setup.jpg` — overwrite with image-78
+- `src/assets/svc-soil-ops.jpg` — new (image-79)
+- `src/assets/svc-pruning.jpg` — overwrite with image-80
 
