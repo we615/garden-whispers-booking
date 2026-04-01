@@ -103,6 +103,7 @@ const PricingSection = () => {
                   🎁 {plan.freeVisits}
                 </span>
               )}
+              <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{plan.desc}</p>
             </div>
           ))}
         </div>
