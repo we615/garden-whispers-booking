@@ -61,7 +61,7 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold shadow-lg px-8">
-            <a href="#booking">Book Free Visit</a>
+            <a href="#booking">Book Free Plants Inspection Visit</a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full border-2 border-white text-white hover:bg-white/10 text-base font-semibold px-8 bg-transparent">
             <a href="https://wa.me/919270993102" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
