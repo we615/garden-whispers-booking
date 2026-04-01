@@ -14,7 +14,7 @@ const pricingData: Record<number, { monthly: number; threeMonth: number; sixMont
 };
 
 const monthlyRates: Record<number, { threeMonth: number; sixMonth: number; yearly: number }> = {
-  10:  { threeMonth: 1080, sixMonth: 1080, yearly: 920 },
+  10:  { threeMonth: 1080, sixMonth: 1000, yearly: 920 },
   20:  { threeMonth: 2160, sixMonth: 2000, yearly: 1760 },
   30:  { threeMonth: 3240, sixMonth: 3000, yearly: 2640 },
   40:  { threeMonth: 4160, sixMonth: 4000, yearly: 3360 },
