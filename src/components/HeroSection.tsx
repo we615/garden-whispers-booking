@@ -49,15 +49,21 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full px-6 flex flex-col items-center text-center">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
           We Make Spaces<br />Bloom 🌿
         </h1>
-        <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl">
+        <p className="text-base sm:text-lg text-white/80 max-w-3xl leading-relaxed mb-3">
           Professional plant care and garden maintenance services across Pune and PCMC — driven by expertise, backed by passion.
+        </p>
+        <p className="text-base sm:text-lg text-white/80 max-w-3xl leading-relaxed mb-4">
+          We combine scientific plant care with thoughtful design to revive, protect, and elevate your green spaces — all under one roof.
+        </p>
+        <p className="font-display text-xl sm:text-2xl font-bold text-white mb-10">
+          Create a space that feels alive, thriving, and beautifully green. 🌿
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold shadow-lg px-8">
-            <a href="#booking">Book free plants inspection visit</a>
+            <a href="#booking">👉 Book Your Expert Visit Today</a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full border-2 border-white text-white hover:bg-white/10 text-base font-semibold px-8 bg-transparent">
             <a href="https://wa.me/919270993102" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>

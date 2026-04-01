@@ -23,21 +23,6 @@ const MissionSection = () => {
   return (
     <section className="py-24 px-4 bg-secondary/50">
       <div className="max-w-6xl mx-auto">
-        {/* CTA content block */}
-        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 sm:p-12 mb-20 text-center">
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-4">
-            Professional plant care and garden maintenance services across Pune and PCMC — driven by expertise, backed by passion.
-          </p>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-4">
-            We combine scientific plant care with thoughtful design to revive, protect, and elevate your green spaces — all under one roof.
-          </p>
-          <p className="font-display text-xl sm:text-2xl font-bold text-foreground mb-8">
-            Create a space that feels alive, thriving, and beautifully green. 🌿
-          </p>
-          <Button asChild size="lg" className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 text-base font-semibold shadow-lg px-8">
-            <a href="#booking">👉 Book Your Expert Visit Today</a>
-          </Button>
-        </div>
 
         {/* Two-column editorial layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
