@@ -92,7 +92,7 @@ const ServicesSection = () => {
           Go beyond regular maintenance — kitchen gardens, vertical gardens, and more.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 auto-rows-fr">
           {addOnServices.map((s) => (
             <AddOnCard key={s.title} service={s} />
           ))}
