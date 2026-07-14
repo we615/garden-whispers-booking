@@ -15,6 +15,11 @@ process.env.MONGODB_URI = process.env.MONGODB_URI ?? "mongodb://127.0.0.1:27017/
 process.env.RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID ?? "rzp_test_fake_key_id";
 process.env.RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET ?? "fake_razorpay_key_secret";
 process.env.RAZORPAY_WEBHOOK_SECRET = process.env.RAZORPAY_WEBHOOK_SECRET ?? "fake_razorpay_webhook_secret";
+// Force-disabled regardless of a real backend/.env on the machine running the suite — the
+// email tests specifically assert the "not configured" no-op path, and no test should ever
+// make a real Resend API call. `??` wouldn't be enough here since dotenv only fills in unset
+// vars, and this needs to override whatever real value a local .env already has.
+process.env.RESEND_API_KEY = "";
 
 // One in-memory MongoDB instance for the whole test run (not one per file) — starting/stopping
 // a real mongod binary per file was slow and raced on mongodb-memory-server's shared download
