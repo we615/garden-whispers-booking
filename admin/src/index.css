@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 90 20% 97%;
+    --foreground: 140 30% 12%;
+
+    --card: 90 25% 99%;
+    --card-foreground: 140 30% 12%;
+
+    --popover: 90 25% 99%;
+    --popover-foreground: 140 30% 12%;
+
+    --primary: 140 50% 24%;
+    --primary-foreground: 90 20% 97%;
+
+    --secondary: 90 18% 91%;
+    --secondary-foreground: 140 30% 12%;
+
+    --muted: 90 12% 93%;
+    --muted-foreground: 140 10% 42%;
+
+    --accent: 42 90% 50%;
+    --accent-foreground: 140 30% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 90 15% 86%;
+    --input: 90 15% 86%;
+    --ring: 140 50% 24%;
+
+    --radius: 1.5rem;
+
+    --brand-red: 0 72% 51%;
+    --brand-blue: 210 70% 50%;
+    --brand-brown: 16 28% 40%;
+
+    --sidebar-background: 90 20% 95%;
+    --sidebar-foreground: 140 30% 12%;
+    --sidebar-primary: 140 50% 24%;
+    --sidebar-primary-foreground: 90 20% 97%;
+    --sidebar-accent: 90 18% 91%;
+    --sidebar-accent-foreground: 140 30% 12%;
+    --sidebar-border: 90 15% 86%;
+    --sidebar-ring: 140 50% 24%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Instrument Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Fraunces', serif;
+  }
+  .font-body {
+    font-family: 'Instrument Sans', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}

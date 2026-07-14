@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Env files — never commit real secrets, .env.example files are the documented template
+.env
+!.env.example
+
+# Backend local media storage (dev only)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
