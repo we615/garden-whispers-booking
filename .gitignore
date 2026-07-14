@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+*.js.map
+
+# Stray compiled output from ad-hoc tsc/node runs against backend/test — that dir is TS-only.
+backend/test/**/*.js
 
 # Env files — never commit real secrets, .env.example files are the documented template
 .env
